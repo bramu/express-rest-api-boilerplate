@@ -18,6 +18,7 @@ const auth = require('./policies/auth.policy');
 // environment: development, staging, testing, production
 const environment = process.env.NODE_ENV;
 
+
 /**
  * express application
  */
@@ -38,6 +39,10 @@ app.use(helmet({
   ieNoOpen: false,
 }));
 
+app.use('/assets', [
+  express.static(__dirname + '/node_modules/jquery/dist/')
+]);
+
 // parsing the request bodys
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -48,6 +53,8 @@ app.all('/private/*', (req, res, next) => auth(req, res, next));
 // fill routes for express application
 app.use('/public', mappedOpenRoutes);
 app.use('/private', mappedAuthRoutes);
+app.use(express.static('assets'));
+app.use(express.static('dist'));
 
 server.listen(config.port, () => {
   if (environment !== 'production' &&

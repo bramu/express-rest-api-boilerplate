@@ -1,6 +1,9 @@
 const database = require('../../config/database');
 
 const dbService = (environment, migrate) => {
+
+  console.log(environment+"-----"+migrate);
+
   const authenticateDB = () => database.authenticate();
 
   const dropDB = () => database.drop();
@@ -40,6 +43,7 @@ const dbService = (environment, migrate) => {
   };
 
   const startDev = async () => {
+    console.log("1234");
     try {
       await authenticateDB();
       migrate=1;
