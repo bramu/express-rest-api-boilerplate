@@ -1,7 +1,7 @@
 const User = require('../models/User');
 const authService = require('../services/auth.service');
 const bcryptService = require('../services/bcrypt.service');
-const _ = require('lodash');
+// const _ = require('lodash');
 
 const UserController = () => {
   const register = async (req, res) => {
@@ -17,7 +17,7 @@ const UserController = () => {
 
         return res.status(200).json({ token, user });
       } catch (err) {
-        console.log(err);
+        // console.log(err);
         return res.status(500).json({ msg: 'Internal server error' });
       }
     }
@@ -75,24 +75,21 @@ const UserController = () => {
 
       return res.status(200).json({ users });
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       return res.status(500).json({ msg: 'Internal server error' });
     }
   };
 
-  const helloWorld = async (req,res) => {
-    console.log("Welcome!!")
+  const helloWorld = async (req, res) => {
+    console.log('Welcome!!');
 
     try {
-      let data = {};
+      const data = {};
       // return res.status(200).json({ "Msg":"Hello World" });
-      const rohit = await User.findOne({where:{email:'rohit@blueberrylabs.com'}})
+      const rohit = await User.findOne({ where: { email: 'rohit@blueberrylabs.com' } });
       data.rohit = rohit.dataValues;
-      console.log(rohit.dataValues);
-      return res.render('../views/home.ejs',data)
-      
+      return res.render('../views/home.ejs', data);
     } catch (err) {
-      console.log(err);
       return res.status(500).json({ msg: 'Internal server error' });
     }
   };
