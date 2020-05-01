@@ -1,17 +1,17 @@
 const development = {
-  database: 'databasename',
-  username: 'username',
+  database: 'Tnet_FreeTemplates_New',
+  username: 'root',
   password: 'password',
-  host: 'localhost',
-  dialect: 'sqlite' || 'mysql' || 'postgres',
+  host: '127.0.0.1',
+  dialect: 'mysql'
 };
 
 const testing = {
-  database: 'databasename',
-  username: 'username',
+  database: 'Tnet_FreeTemplates_New',
+  username: 'root',
   password: 'password',
-  host: 'localhost',
-  dialect: 'sqlite' || 'mysql' || 'postgres',
+  host: '127.0.0.1',
+  dialect: 'mysql'
 };
 
 const production = {
@@ -19,7 +19,7 @@ const production = {
   username: process.env.DB_USER,
   password: process.env.DB_PASS,
   host: process.env.DB_HOST || 'localhost',
-  dialect: 'sqlite' || 'mysql' || 'postgres',
+  dialect: 'mysql' ,
 };
 
 module.exports = {
