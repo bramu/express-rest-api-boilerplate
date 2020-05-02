@@ -7,6 +7,10 @@ const helmet = require('helmet');
 const http = require('http');
 const mapRoutes = require('express-routes-mapper');
 const cors = require('cors');
+const expressLayouts = require('express-ejs-layouts');
+const path = require('path');
+const ejs = require('ejs');
+const partials = require('express-partials');
 
 /**
  * server configuration
@@ -39,13 +43,16 @@ app.use(helmet({
   ieNoOpen: false,
 }));
 
-app.use('/assets', [
-  express.static(__dirname + '/node_modules/jquery/dist/')
-]);
+// app.use('/assets', [
+//   express.static(__dirname + '/node_modules/jquery/dist/')
+// ]);
 
 // parsing the request bodys
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(expressLayouts);
+app.set('views', path.join(__dirname,'../views'));
+app.set('view engine', 'ejs');
 
 // secure your private routes with jwt authentication middleware
 app.all('/private/*', (req, res, next) => auth(req, res, next));
@@ -53,8 +60,9 @@ app.all('/private/*', (req, res, next) => auth(req, res, next));
 // fill routes for express application
 app.use('/public', mappedOpenRoutes);
 app.use('/private', mappedAuthRoutes);
-app.use(express.static('assets'));
+app.use('/',express.static('assets'));
 app.use(express.static('dist'));
+
 
 server.listen(config.port, () => {
   if (environment !== 'production' &&
