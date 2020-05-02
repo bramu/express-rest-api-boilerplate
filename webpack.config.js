@@ -1,19 +1,41 @@
 var path = require('path');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+// var CopyWebpackPlugin = require('copy-webpack-plugin');
+// const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const NodemonPlugin = require('nodemon-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: ['./assets/home.js', './style.css'],
+  mode:'development',
+  entry: {
+    home:'./assets/home.js', 
+    styles:'./style.scss'
+  },
+  devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     publicPath: '/'
   },
-    module: {
-      rules: [
-        {
-          test: /\.css$/i,
-          use: ['style-loader', 'css-loader'],
-        },
-      ],
-    },
+  devServer: {
+      contentBase: './dist'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
+        ],
+      },
+    ],
+  },
+  // watchOptions:  300,
+  plugins: [
+  new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+  ]
 };

@@ -11,6 +11,7 @@ const expressLayouts = require('express-ejs-layouts');
 const path = require('path');
 const ejs = require('ejs');
 const partials = require('express-partials');
+const sassMiddleware = require('node-sass-middleware')
 
 /**
  * server configuration
@@ -60,8 +61,10 @@ app.all('/private/*', (req, res, next) => auth(req, res, next));
 // fill routes for express application
 app.use('/public', mappedOpenRoutes);
 app.use('/private', mappedAuthRoutes);
-app.use('/',express.static('assets'));
-app.use(express.static('dist'));
+// app.use('/',express.static('assets'));
+app.use('/dist',express.static('dist'));
+
+
 
 
 server.listen(config.port, () => {
