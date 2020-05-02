@@ -8,7 +8,7 @@ module.exports = {
   mode:'development',
   entry: {
     home:'./assets/home.js', 
-    styles:'./style.scss'
+    styles:'./assets/styles.scss'
   },
   devtool: 'inline-source-map',
   output: {
@@ -35,7 +35,7 @@ module.exports = {
     ],
   },
   // watchOptions:  300,
-  plugins: [
-  new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-  ]
+  // plugins: [
+  // new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+  // ]
 };

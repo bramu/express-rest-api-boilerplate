@@ -4,6 +4,7 @@ const publicRoutes = {
   'POST /login': 'UserController.login',
   'POST /validate': 'UserController.validate',
   'GET /': 'UserController.helloWorld',
+  'GET /category/:slug': 'CategoryPageController.show',
 };
 
 module.exports = publicRoutes;
