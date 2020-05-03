@@ -85,7 +85,8 @@ SiteUrls.getAll = async() => {
 SiteUrls.getByUrl = async(qOpts) => {
     let opts={
         where:{
-            url: qOpts.url
+            url: qOpts.url,
+            status: 1
         }
     };
 

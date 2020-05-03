@@ -46,25 +46,6 @@ const UserController = () => {
 
           return res.status(200).json({ token, user });
         }
-      };
-
-      const helloWorld = async (req, res) => {
-        console.log('Welcome!!');
-
-        try {
-          const data = {};
-          // return res.status(200).json({ "Msg":"Hello World" });
-          //const rohit = await User.findOne({ where: { email: 'rohit@blueberrylabs.com' } });
-          data.rohit = { email: "rohot@" };
-          data.layout = 'layouts/new-layout.ejs';
-          data.firstfold = 'home';
-          return res.render('home.ejs', data);
-        } catch (err) {
-          return res.status(500).json({ msg: 'Internal server error' });
-        }
-      };
-
-
       return res.status(401).json({ msg: 'Unauthorized' });
     } catch (err) {
       console.log(err);
@@ -72,7 +53,6 @@ const UserController = () => {
     }
   }
 
-  return res.status(400).json({ msg: 'Bad Request: Email or password is wrong' });
 };
 
 const validate = (req, res) => {
