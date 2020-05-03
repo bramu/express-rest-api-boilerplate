@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 
 const sequelize = require('../../config/database');
 
-// const models = require('./User');
+const models = require('./User');
 
 // console.log(models);
 
@@ -97,9 +97,12 @@ SiteUrls.getByUrl = async(qOpts) => {
 };
 
 SiteUrls.getProductsByUrl = async(qOpts) => {
-    let query = `select p.*, supo.orderValue from site_urls_product_order as supo inner join products as p on p.id = supo.productId where supo.siteUrlId = :siteUrlId and p.productStatus = 1;`;
+    let query = `select p.*, supo.orderValue from site_urls_product_order as supo inner join products as p on p.id = supo.productId where supo.siteUrlId = :siteUrlId and p.productStatus = 1 ORDER BY supo.orderValue DESC LIMIT :limit OFFSET :offSet;`;
     let replacements = {
-        siteUrlId: qOpts.siteUrlId
+        siteUrlId: qOpts.siteUrlId,
+        perPage: qOpts.limit,
+        offSet: qOpts.offset
+
     };
 
     return SiteUrls.sequelize

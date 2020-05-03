@@ -10,6 +10,7 @@ const cors = require('cors');
 const expressLayouts = require('express-ejs-layouts');
 const path = require('path');
 const { compileSassAndSaveMultiple } = require('compile-sass');
+const fs = require('fs');
 
 /**
  * server configuration

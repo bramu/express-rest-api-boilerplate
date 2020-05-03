@@ -20,7 +20,7 @@
   "scripts": {
     "start": "npm run nodemon",
     "dev": "cross-env NODE_ENV=development node ./api/api.js",
-    "nodemon": "nodemon --legacy-watch assets --ext js,scss,mjs,json --exec npm run dev",
+    "nodemon": "nodemon --exec npm run dev",
     "lint": "eslint ./api/. ./config/. ./test/.",
     "pretest": "npm run lint",
     "production": "cross-env NODE_ENV=production node ./api/api.js",
