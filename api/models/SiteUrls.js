@@ -100,7 +100,7 @@ SiteUrls.getProductsByUrl = async(qOpts) => {
     let query = `select p.*, supo.orderValue from site_urls_product_order as supo inner join products as p on p.id = supo.productId where supo.siteUrlId = :siteUrlId and p.productStatus = 1 ORDER BY supo.orderValue DESC LIMIT :limit OFFSET :offSet;`;
     let replacements = {
         siteUrlId: qOpts.siteUrlId,
-        perPage: qOpts.limit,
+        limit: qOpts.limit,
         offSet: qOpts.offset
 
     };
