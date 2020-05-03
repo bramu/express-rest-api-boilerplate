@@ -1,0 +1,160 @@
+.content-sec {
+  margin-bottom: 20px;
+  width: 100%;
+  float: left;
+  width: 100%;
+  color: #222;
+
+  .image-sec {
+    display: flex;
+    display: -webkit-flex;
+    width: 100%;
+    margin-bottom: 30px;
+
+    .image {
+      margin-right: 40px;
+    }
+
+    .content-block {
+      ul {
+        float: left;
+        width: 100%;
+      }
+
+      ol {
+        float: left;
+        width: 100%;
+      }
+
+      h4 {
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        line-height: 22px;
+      }
+    }
+
+  }
+
+
+  p {
+    color: #222;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h2 {
+    margin-bottom: 15px;
+  }
+
+  ul {
+    overflow-y: auto;
+    margin-bottom: 20px;
+    clear: both;
+
+    li {
+      color: #222;
+      line-height: 24px;
+      margin: 0 0 15px 0px;
+      padding: 0px;
+      letter-spacing: 0.3px;
+      padding-left: 20px;
+      font-size: 14px;
+      position: relative;
+      float: left;
+      width: 100%;
+
+      &:before {
+        // background: url($icons) no-repeat;
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-position: -557px -222px;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 2px;
+      }
+
+      h3 {
+        margin-bottom: 0;
+        line-height: inherit;
+      }
+    }
+  }
+
+  ol {
+    margin-bottom: 30px;
+    padding-left: 18px;
+
+    li {
+      color: #222;
+      margin-bottom: 15px;
+      line-height: 18px;
+      margin: 0 0 20px 0px;
+      padding: 0px;
+      letter-spacing: 0.3px;
+      padding-left: 0px;
+      font-size: 14px;
+      position: relative;
+      width: 100%;
+      list-style: decimal;
+    }
+  }
+
+  .content {
+    overflow: hidden;
+    position: relative;
+
+    &.collapse {
+      &:after {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        max-height: calc(100% - 1.5em);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f5f5f5);
+        content: ' ';
+      }
+    }
+  }
+
+  .mheight {
+    height: 200px;
+  }
+
+  .more-text {
+    border-bottom: solid 1px #0065de;
+    color: #0065de;
+    cursor: pointer;
+    font-size: 13px;
+    padding-top: 5px;
+    float: left;
+
+    &:hover {
+      border-bottom: 1px solid transparent;
+    }
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+}
