@@ -1,10 +1,23 @@
+<<<<<<< HEAD
 const _ = require('lodash');
 
 const SiteUrls = require('../models/SiteUrls');
 
+=======
+>>>>>>> 8d376ff440a931b741ca275932065e8edefb02bf
 const CategoryPageController = () => {
+  const show = async (req, res) => {
+    try {
+      const model = {};
+      model.layout = 'layouts/category.ejs';
+      return res.render('pages/category-page.ejs', model);
+    } catch (err) {
+      // console.log(err);
+      return res.status(500).json({ msg: 'Internal server error' });
+    }
+  };
 
-    const show = async(req, res) => {
+  const show = async (req, res) => {
 
         let model = {};
         model.layout = 'layouts/category.ejs';
@@ -43,9 +56,9 @@ const CategoryPageController = () => {
     };
 
 
-    return {
-        show
-    };
+  return {
+    show
+  };
 };
 
 module.exports = CategoryPageController;
