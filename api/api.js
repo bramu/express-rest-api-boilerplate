@@ -11,7 +11,8 @@ const expressLayouts = require('express-ejs-layouts');
 const path = require('path');
 const ejs = require('ejs');
 const partials = require('express-partials');
-const sassMiddleware = require('node-sass-middleware')
+const sassMiddleware = require('node-sass-middleware');
+const fs = require('fs');
 
 /**
  * server configuration
@@ -64,12 +65,22 @@ app.use('/private', mappedAuthRoutes);
 // app.use('/',express.static('assets'));
 app.use('/assets', express.static('assets'));
 
+const testFolder = path.join(__dirname, '../assets/styles/firstfold/');
+var scssfiles = fs.readdirSync(testFolder);
+
 const { compileSassAndSaveMultiple } = require('compile-sass');
 compileSassAndSaveMultiple({
-    sassPath: path.join(__dirname, '../assets/scss/'),
+    sassPath: path.join(__dirname, '../assets/styles/firstfold/'),
+    cssPath: path.join(__dirname, '../assets/css/firstfold/'),
+    files: scssfiles
+});
+
+compileSassAndSaveMultiple({
+    sassPath: path.join(__dirname, '../assets/styles/'),
     cssPath: path.join(__dirname, '../assets/css/'),
     files: ['layout.scss']
 });
+
 
 server.listen(config.port, () => {
     if (environment !== 'production' &&
