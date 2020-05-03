@@ -62,11 +62,21 @@ app.use('/private', mappedAuthRoutes);
 // app.use('/',express.static('assets'));
 app.use('/assets', express.static('assets'));
 
+const testFolder = path.join(__dirname, '../assets/styles/firstfold/');
+let scssfiles = fs.readdirSync(testFolder);
+
 compileSassAndSaveMultiple({
-  sassPath: path.join(__dirname, '../assets/scss/'),
+  sassPath: path.join(__dirname, '../assets/styles/firstfold/'),
+  cssPath: path.join(__dirname, '../assets/css/firstfold/'),
+  files: scssfiles
+});
+
+compileSassAndSaveMultiple({
+  sassPath: path.join(__dirname, '../assets/styles/'),
   cssPath: path.join(__dirname, '../assets/css/'),
   files: ['layout.scss']
 });
+
 
 server.listen(config.port, () => {
   if (environment !== 'production' &&
