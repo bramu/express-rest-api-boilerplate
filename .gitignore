@@ -65,3 +65,7 @@ typings/
 
 # sqlite database
 db/database.sqlite
+
+
+#assets css files
+assets/css
