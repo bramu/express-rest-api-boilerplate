@@ -9,10 +9,7 @@ const mapRoutes = require('express-routes-mapper');
 const cors = require('cors');
 const expressLayouts = require('express-ejs-layouts');
 const path = require('path');
-const ejs = require('ejs');
-const partials = require('express-partials');
-const sassMiddleware = require('node-sass-middleware');
-const fs = require('fs');
+const { compileSassAndSaveMultiple } = require('compile-sass');
 
 /**
  * server configuration
@@ -40,9 +37,9 @@ app.use(cors());
 
 // secure express app
 app.use(helmet({
-    dnsPrefetchControl: false,
-    frameguard: false,
-    ieNoOpen: false,
+  dnsPrefetchControl: false,
+  frameguard: false,
+  ieNoOpen: false,
 }));
 
 // app.use('/assets', [
@@ -66,29 +63,28 @@ app.use('/private', mappedAuthRoutes);
 app.use('/assets', express.static('assets'));
 
 const testFolder = path.join(__dirname, '../assets/styles/firstfold/');
-var scssfiles = fs.readdirSync(testFolder);
+const scssfiles = fs.readdirSync(testFolder);
 
-const { compileSassAndSaveMultiple } = require('compile-sass');
 compileSassAndSaveMultiple({
-    sassPath: path.join(__dirname, '../assets/styles/firstfold/'),
-    cssPath: path.join(__dirname, '../assets/css/firstfold/'),
-    files: scssfiles
+  sassPath: path.join(__dirname, '../assets/styles/firstfold/'),
+  cssPath: path.join(__dirname, '../assets/css/firstfold/'),
+  files: scssfiles
 });
 
 compileSassAndSaveMultiple({
-    sassPath: path.join(__dirname, '../assets/styles/'),
-    cssPath: path.join(__dirname, '../assets/css/'),
-    files: ['layout.scss']
+  sassPath: path.join(__dirname, '../assets/styles/'),
+  cssPath: path.join(__dirname, '../assets/css/'),
+  files: ['layout.scss']
 });
 
 
 server.listen(config.port, () => {
-    if (environment !== 'production' &&
-        environment !== 'development' &&
-        environment !== 'testing'
-    ) {
-        console.error(`NODE_ENV is set to ${environment}, but only production and development are valid.`);
-        process.exit(1);
-    }
-    return 'Started';
+  if (environment !== 'production' &&
+    environment !== 'development' &&
+    environment !== 'testing'
+  ) {
+    console.error(`NODE_ENV is set to ${environment}, but only production and development are valid.`);
+    process.exit(1);
+  }
+  return 'Started';
 });
