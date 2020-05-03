@@ -63,7 +63,7 @@ app.use('/private', mappedAuthRoutes);
 app.use('/assets', express.static('assets'));
 
 const testFolder = path.join(__dirname, '../assets/styles/firstfold/');
-let scssfiles = fs.readdirSync(testFolder);
+const scssfiles = fs.readdirSync(testFolder);
 
 compileSassAndSaveMultiple({
   sassPath: path.join(__dirname, '../assets/styles/firstfold/'),
