@@ -89,6 +89,7 @@ const UserController = () => {
             //const rohit = await User.findOne({ where: { email: 'rohit@blueberrylabs.com' } });
             data.rohit = { email: "rohot@" };
             data.layout = 'layouts/new-layout.ejs';
+            data.firstfold = 'home';
             return res.render('home.ejs', data);
         } catch (err) {
             return res.status(500).json({ msg: 'Internal server error' });
