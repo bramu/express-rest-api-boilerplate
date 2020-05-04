@@ -1,4 +1,6 @@
-main{display: block;}
+main {
+  display: block;
+}
 .container {
   width: 1484px;
   margin: 0px auto;
@@ -34,7 +36,7 @@ input:-moz-placeholder {
   //height: 32px;
   border-radius: 3px;
   text-align: center;
-  
+
   border: 0;
   font-weight: 400;
   font-size: 14px;
@@ -64,7 +66,7 @@ input:-moz-placeholder {
   }
 }
 
-.btn-pro{
+.btn-pro {
   background: $pcolor;
   color: #fff;
   text-align: center;
@@ -74,11 +76,14 @@ input:-moz-placeholder {
   padding: 8px 18px;
 
   &:hover {
-    background: $pcolor;color: #fff;
+    background: $pcolor;
+    color: #fff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
-  &:hover{background: #f11701;}
+  &:hover {
+    background: #f11701;
+  }
 }
 
 h2 {
@@ -98,12 +103,14 @@ main {
   padding-top: 80px;
 }
 
-.icon{background: url($icons);}
+.icon {
+  background: url($icons);
+}
 
 @media only screen and (max-width: 1500px) {
   .container {
     width: 100%;
-    padding: 0 calc((100% - 1228px)/2);
+    padding: 0 calc((100% - 1228px) / 2);
   }
   main {
     padding-top: 64px;
@@ -115,12 +122,12 @@ main {
     padding: 0 20px;
   }
 }
-@media only screen and (max-width: 675px) { 
-   main {
-      padding-top: 88px;
-    }
+@media only screen and (max-width: 675px) {
+  main {
+    padding-top: 88px;
+  }
 
-    .container{
-      padding: 0 10px;
-    }
+  .container {
+    padding: 0 10px;
+  }
 }

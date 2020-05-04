@@ -20,8 +20,8 @@
       box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.18);
       position: relative;
       float: left;
-      -webkit-transition: all .2s;
-      transition: all .2s;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
       width: 100%;
 
       &:hover {
@@ -50,7 +50,7 @@
           @include border-radius(4px 4px 0 0);
         }
 
-        &:hover+h2 {
+        &:hover + h2 {
           text-decoration: underline;
         }
       }
@@ -127,7 +127,7 @@
             width: 35px;
             height: 34px;
 
-            &:hover+.tool-tip {
+            &:hover + .tool-tip {
               display: block;
             }
           }
@@ -135,11 +135,11 @@
           &.edit {
             width: 40px;
             height: 40px;
-            background: url(https://images.template.net/images/img/dashboard-icons.png)no-repeat;
+            background: url(https://images.template.net/images/img/dashboard-icons.png)
+              no-repeat;
             background-position: -380px -60px;
             background-color: #fff;
           }
-
 
           &:hover .tolltip-text {
             opacity: 1;
