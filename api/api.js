@@ -87,7 +87,7 @@ compileSassAndSaveMultiple({
   files: ['layout.scss'],
 });
 
-app.locals.renderScriptsTags = Assets;
+app.locals.renderScripts = Assets;
 
 server.listen(config.port, () => {
   if (
