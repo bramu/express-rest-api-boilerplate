@@ -93,6 +93,14 @@ header {
                     margin: 7px 0 0 7px;
                     display: inline-block;
                 }
+                i.top-arr {
+                    background: url($icons) no-repeat;
+                    width: 9px;
+                    height: 7px;
+                    margin: 7px 0 0 7px;
+                    background-position: 0 1px;
+                    display: inline-block;
+                  }
             }
 
             li.editorer {
@@ -232,6 +240,13 @@ header {
                         width: 22px;
                         height: 22px;
                         margin-right: 6px;
+                       i.icon {
+                            width: 23px;
+                            height: 24px;
+                            margin-right: 6px;
+                            display: inline-block;
+                            background-position: -989px -351px;
+                        }
                     }
                 }
 
@@ -306,6 +321,7 @@ header {
                     height: 6px;
                     margin: 9px 0 0 4px;
                 }
+              
             }
 
             li.download-list {
