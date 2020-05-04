@@ -12,6 +12,8 @@ const path = require('path');
 const { compileSassAndSaveMultiple } = require('compile-sass');
 const fs = require('fs');
 
+require('dotenv').config();
+
 /**
  * server configuration
  */
@@ -21,7 +23,6 @@ const auth = require('./policies/auth.policy');
 
 // environment: development, staging, testing, production
 const environment = process.env.NODE_ENV;
-
 
 /**
  * express application
@@ -37,11 +38,13 @@ const mappedAuthRoutes = mapRoutes(config.privateRoutes, 'api/controllers/');
 app.use(cors());
 
 // secure express app
-app.use(helmet({
-  dnsPrefetchControl: false,
-  frameguard: false,
-  ieNoOpen: false,
-}));
+app.use(
+	helmet({
+		dnsPrefetchControl: false,
+		frameguard: false,
+		ieNoOpen: false,
+	})
+);
 
 // app.use('/assets', [
 //   express.static(__dirname + '/node_modules/jquery/dist/')
@@ -74,24 +77,27 @@ const testFolder = path.join(__dirname, '../assets/styles/firstfold/');
 const scssfiles = fs.readdirSync(testFolder);
 
 compileSassAndSaveMultiple({
-  sassPath: path.join(__dirname, '../assets/styles/firstfold/'),
-  cssPath: path.join(__dirname, '../assets/css/firstfold/'),
-  files: scssfiles
+	sassPath: path.join(__dirname, '../assets/styles/firstfold/'),
+	cssPath: path.join(__dirname, '../assets/css/firstfold/'),
+	files: scssfiles,
 });
 
 compileSassAndSaveMultiple({
-  sassPath: path.join(__dirname, '../assets/styles/'),
-  cssPath: path.join(__dirname, '../assets/css/'),
-  files: ['layout.scss']
+	sassPath: path.join(__dirname, '../assets/styles/'),
+	cssPath: path.join(__dirname, '../assets/css/'),
+	files: ['layout.scss'],
 });
 
 server.listen(config.port, () => {
-  if (environment !== 'production' &&
-    environment !== 'development' &&
-    environment !== 'testing'
-  ) {
-    console.error(`NODE_ENV is set to ${environment}, but only production and development are valid.`);
-    process.exit(1);
-  }
-  return 'Started';
+	if (
+		environment !== 'production' &&
+		environment !== 'development' &&
+		environment !== 'testing'
+	) {
+		console.error(
+			`NODE_ENV is set to ${environment}, but only production and development are valid.`
+		);
+		process.exit(1);
+	}
+	return 'Started';
 });

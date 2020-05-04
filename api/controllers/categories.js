@@ -5,8 +5,8 @@ const SiteUrlsFaq = require('../models/SiteUrlsFaq');
 
 const CategoryPageController = () => {
   const show = async (req, res) => {
-    let model = {};
-    let productOpts = {};
+    const model = {};
+    const productOpts = {};
     let perPage;
     let currentpage;
     model.layout = 'layouts/category.ejs';
