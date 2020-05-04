@@ -1,4 +1,1510 @@
-<h1>First Ejs Page</h1>
-<p><%=rohit.email%></p>
-<div id="name">Rohit</div>
-<h3>This is child.</h3>
+<%- include('partials/header') %>
+<main>
+  <div id="homeHeaderBannerSection">
+    <section class="banner-sec">
+      <div class="container">
+        <div class="home-banner">
+          <div class="home-banner-content">
+            <h1> Ready-Made Templates </h1>
+            <p class="sub-title">Beautifully Designed, Easily Editable Templates to Get your Work Done Faster
+              &amp; Smarter.<br>Simply Browse, Search, Save &amp; Download our Easy to use Templates.</p>
+            <ul>
+              <li><span>100,000+ Ready-Made Templates</span></li>
+              <li><span>Made by Experts &amp; Professionals</span></li>
+              <li><span>Save Money and Time</span></li>
+              <li><span>Original Content Included</span></li>
+              <li><span>Available in All File Formats</span></li>
+              <li><span>Original Artwork, Fonts and Images</span></li>
+            </ul>
+            <div class="download-sec"><a href="/get-access" target="_blank" class="btn btn-pro bannerBtn tracker"
+                data-event-action="Category Page Main CTA Button" data-event-label="">Subscribe to Download </a><button
+                class="blue-btn bannerBtn btn signup tracker" data-event-action="Hero Banner FREE Sign Up CTA Button"
+                data-event-label="" data-ver="3" onclick="signUp(this)">Signup for Free</button></div>
+          </div><img src="https://images.template.net/images/img/Banner-image-Homepage.svg"
+            alt="template.net home banner image">
+        </div>
+      </div>
+    </section>
+    <div class="StickyBanner" style="display: none;">
+      <div class="container">
+        <div class="content">
+          <div class="left"><img src="https://images.template.net/images/img/white-fav.svg" alt="">
+            <h2>100,000+ Ready-Made Designs, Docs &amp; Templates to Start, Run and Grow your Business</h2>
+          </div><a href="/pricing" class="download-btn">Subscribe<span> to Download</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="hor-catlist">
+    <div class="container">
+      <div class="hor-tags">
+        <ul class="owl-carousel owl-theme owl-loaded owl-drag" id="mainTags">
+          <div class="owl-stage-outer">
+            <div class="owl-stage"
+              style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2596px;">
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Business Cards"
+                    href="https://newft.survivalapp.com/editable/business-cards"> Business Cards </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Wedding Invitations"
+                    href="https://newft.survivalapp.com/editable/invitations/wedding"> Wedding Invitations </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Media Kits"
+                    href="https://newft.survivalapp.com/editable/media-kits"> Media Kits </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Wordpress Templates"
+                    href="https://newft.survivalapp.com/editable/websites/wordpress-templates"> Wordpress Templates </a>
+                </li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Menu Templates"
+                    href="https://newft.survivalapp.com/editable/menu"> Menu Templates </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="App Landing Pages"
+                    href="https://newft.survivalapp.com/editable/app-landing-page"> App Landing Pages </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Certificates"
+                    href="https://newft.survivalapp.com/editable/certificates"> Certificates </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Book Covers"
+                    href="https://newft.survivalapp.com/editable/book-covers"> Book Covers </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Banners"
+                    href="https://newft.survivalapp.com/editable/banner"> Banners </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Resume Templates"
+                    href="https://newft.survivalapp.com/editable/resumes"> Resume Templates </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Tags"
+                    href="https://newft.survivalapp.com/editable/tags"> Tags </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Presentations"
+                    href="https://newft.survivalapp.com/editable/presentations"> Presentations </a></li>
+              </div>
+              <div class="owl-item" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Planners"
+                    href="https://newft.survivalapp.com/editable/planners"> Planners </a></li>
+              </div>
+              <div class="owl-item" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Letters"
+                    href="https://newft.survivalapp.com/editable/letters"> Letters </a></li>
+              </div>
+              <div class="owl-item" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Newspaper Templates"
+                    href="https://newft.survivalapp.com/editable/newspaper"> Newspaper Templates </a></li>
+              </div>
+              <div class="owl-item" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Magazines"
+                    href="https://newft.survivalapp.com/editable/magazines"> Magazines </a></li>
+              </div>
+              <div class="owl-item" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Business Brochures"
+                    href="https://newft.survivalapp.com/editable/brochures"> Business Brochures </a></li>
+              </div>
+              <div class="owl-item" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Email Newsletters"
+                    href="https://newft.survivalapp.com/editable/email-newsletters"> Email Newsletters </a></li>
+              </div>
+              <div class="owl-item" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Calendars"
+                    href="https://newft.survivalapp.com/editable/graphic-templates/calendars"> Calendars </a></li>
+              </div>
+              <div class="owl-item" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Psd Website Templates"
+                    href="https://newft.survivalapp.com/editable/websites/photoshop-psd"> Psd Website Templates </a>
+                </li>
+              </div>
+              <div class="owl-item" style="width: auto;">
+                <li class="item"><a class="tracker" data-event-action="Tags" data-event-label="Posters"
+                    href="https://newft.survivalapp.com/editable/posters"> Posters </a></li>
+              </div>
+            </div>
+          </div>
+          <div class="owl-nav"><button type="button" role="presentation" class="owl-prev disabled"><span
+                aria-label="Previous"></span></button><button type="button" role="presentation" class="owl-next"><span
+                aria-label="Next"></span></button></div>
+          <div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button role="button"
+              class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button
+              role="button" class="owl-dot"><span></span></button><button role="button"
+              class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button
+              role="button" class="owl-dot"><span></span></button><button role="button"
+              class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button
+              role="button" class="owl-dot"><span></span></button></div>
+        </ul>
+      </div>
+      <div class="file-formate-drop">
+        <ul class="owl-carousel owl-theme hor-list-formats owl-loaded owl-drag" id="mainFormats">
+          <!--  Home page file format tags -->
+          <div class="owl-stage-outer">
+            <div class="owl-stage"
+              style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1901px;">
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a href="https://newft.survivalapp.com/editable/word" class="tracker"
+                    data-event-action="File Format Tags" data-event-label="MS Word"><span
+                      class="icon format-icon word-icon"></span> MS Word </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a href="https://newft.survivalapp.com/editable/google-docs" class="tracker"
+                    data-event-action="File Format Tags" data-event-label="Google Docs"><span
+                      class="icon format-icon docs-icon"></span> Google Docs </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a href="https://newft.survivalapp.com/editable/psd" class="tracker"
+                    data-event-action="File Format Tags" data-event-label="Photoshop"><span
+                      class="icon format-icon ps-icon"></span> Photoshop </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a href="https://newft.survivalapp.com/editable/pdf" class="tracker"
+                    data-event-action="File Format Tags" data-event-label="PDF"><span
+                      class="icon format-icon document-icon"></span> PDF </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a href="https://newft.survivalapp.com/editable/excel" class="tracker"
+                    data-event-action="File Format Tags" data-event-label="MS Excel"><span
+                      class="icon format-icon exel-icon"></span> MS Excel </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a href="https://newft.survivalapp.com/editable/google-sheets" class="tracker"
+                    data-event-action="File Format Tags" data-event-label="Google Sheets"><span
+                      class="icon format-icon sheets-icon"></span> Google Sheets </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a href="https://newft.survivalapp.com/editable/illustrator" class="tracker"
+                    data-event-action="File Format Tags" data-event-label="Illustrator"><span
+                      class="icon format-icon ai-icon"></span> Illustrator </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a href="https://newft.survivalapp.com/editable/html" class="tracker"
+                    data-event-action="File Format Tags" data-event-label="HTML5"><span
+                      class="icon format-icon html-icon"></span> HTML5 </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a href="https://newft.survivalapp.com/editable/indesign" class="tracker"
+                    data-event-action="File Format Tags" data-event-label="InDesign"><span
+                      class="icon format-icon indesign-icon"></span> InDesign </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a href="https://newft.survivalapp.com/editable/publisher" class="tracker"
+                    data-event-action="File Format Tags" data-event-label="Publisher"><span
+                      class="icon format-icon publisher-icon"></span> Publisher </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a href="https://newft.survivalapp.com/editable/pages" class="tracker"
+                    data-event-action="File Format Tags" data-event-label="Pages"><span
+                      class="icon format-icon pages-icon"></span> Pages </a></li>
+              </div>
+              <div class="owl-item active" style="width: auto;">
+                <li class="item"><a href="https://newft.survivalapp.com/editable/numbers" class="tracker"
+                    data-event-action="File Format Tags" data-event-label="Numbers"><span
+                      class="icon format-icon numbers-icon"></span> Numbers </a></li>
+              </div>
+              <div class="owl-item" style="width: auto;">
+                <li class="item"><a href="https://newft.survivalapp.com/editable/outlook" class="tracker"
+                    data-event-action="File Format Tags" data-event-label="Outlook"><span
+                      class="icon format-icon outlook-icon"></span> Outlook </a></li>
+              </div>
+              <div class="owl-item" style="width: auto;">
+                <li class="item"><a href="https://newft.survivalapp.com/editable/wordpress" class="tracker"
+                    data-event-action="File Format Tags" data-event-label="Wordpress"><span
+                      class="icon format-icon wordpress-icon"></span> Wordpress </a></li>
+              </div>
+              <div class="owl-item" style="width: auto;">
+                <li class="item"><a href="https://newft.survivalapp.com/editable/google-slides" class="tracker"
+                    data-event-action="File Format Tags" data-event-label="Google Slides"><span
+                      class="icon format-icon slides-icon"></span> Google Slides </a></li>
+              </div>
+            </div>
+          </div>
+          <div class="owl-nav"><button type="button" role="presentation" class="owl-prev disabled"><span
+                aria-label="Previous"></span></button><button type="button" role="presentation" class="owl-next"><span
+                aria-label="Next"></span></button></div>
+          <div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button role="button"
+              class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button
+              role="button" class="owl-dot"><span></span></button><button role="button"
+              class="owl-dot"><span></span></button></div>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="home-products-sec">
+    <div class="container">
+      <div class="priducts-sec">
+        <div class="products">
+          <ul class="grid">
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="openEditorPopup(this)"
+                    data-image="https://images.template.net/39248/Responsive-Restaurant-Website.jpg"
+                    data-title="Free Responsive Restaurant Website Template" data-productid="39248"
+                    data-category="Website Templates" class="tracker" data-event-action="Product Lists"
+                    data-event-label="PRO  Product" data-pro="1" data-editorurl="https://jobdescription.template.net"
+                    data-parentcategoryid="395"><img
+                      src="https://images.template.net/39248/Responsive-Restaurant-Website.jpg"
+                      srcset="https://images.template.net/39248/Responsive-Restaurant-Website.jpg?width=220, https://images.template.net/39248/Responsive-Restaurant-Website.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Responsive Restaurant Website Template"> </a>
+                </figure>
+                <a onclick="sendProductClickEvent(this)" data-title="Free Responsive Restaurant Website Template"
+                  data-productid="39248" data-category="" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/39248/responsive-restaurant-website" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Responsive Restaurant Website Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="openEditorPopup(this)"
+                    data-image="https://images.template.net/4885/Free-Church-Banner-Template-440x570-1.jpg"
+                    data-title="Free Church Banner Template" data-productid="4885" data-category="" class="tracker"
+                    data-event-action="Product Lists" data-event-label="PRO  Product" data-pro="1"
+                    data-editorurl="https://letters.template.net" data-parentcategoryid="53"><img
+                      src="https://images.template.net/4885/Free-Church-Banner-Template-440x570-1.jpg"
+                      srcset="https://images.template.net/4885/Free-Church-Banner-Template-440x570-1.jpg?width=220, https://images.template.net/4885/Free-Church-Banner-Template-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Church Banner Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Church Banner Template" data-productid="4885"
+                  data-category="" class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/4885/church-banner" target="_blank" rel="noreferrer">
+                  <h2> Free Church Banner Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Membership Application Form"
+                    data-parentcategoryid="" data-productid="26411" data-editorurl="" data-category="Forms"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/26411/membership-application-form" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/26411/Membership-Application-Form.jpg"
+                      srcset="https://images.template.net/26411/Membership-Application-Form.jpg?width=220, https://images.template.net/26411/Membership-Application-Form.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Membership Application Form"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Membership Application Form"
+                  data-productid="26411" data-category="Forms" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/26411/membership-application-form" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Membership Application Form </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)"
+                    data-title="Free Creative Construction Leaflet Template" data-parentcategoryid=""
+                    data-productid="41057" data-editorurl="" data-category="Leaflets" class="tracker"
+                    data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/41057/creative-construction-leaflet" target="_blank"
+                    rel="noreferrer"><img
+                      src="https://images.template.net/41057/creative-construction-leaflet-template.jpg"
+                      srcset="https://images.template.net/41057/creative-construction-leaflet-template.jpg?width=220, https://images.template.net/41057/creative-construction-leaflet-template.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Creative Construction Leaflet Template"> </a>
+                </figure>
+                <a onclick="sendProductClickEvent(this)" data-title="Free Creative Construction Leaflet Template"
+                  data-productid="41057" data-category="Leaflets" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/41057/creative-construction-leaflet" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Creative Construction Leaflet Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Construction Email Ad Template"
+                    data-parentcategoryid="" data-productid="17111" data-editorurl="" data-category="Email Ads"
+                    class="tracker" data-event-action="Product Lists" data-event-label="PRO Product"
+                    href="https://newft.survivalapp.com/pro/17111/construction-email-ad" target="_blank"
+                    rel="noreferrer"><img
+                      src="https://images.template.net/17111/Construction-Email-Ad-Template-440x570-1.jpg"
+                      srcset="https://images.template.net/17111/Construction-Email-Ad-Template-440x570-1.jpg?width=220, https://images.template.net/17111/Construction-Email-Ad-Template-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Construction Email Ad Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Construction Email Ad Template"
+                  data-productid="17111" data-category="Email Ads" class="tracker" data-event-action="Product Lists"
+                  data-event-label="PRO Product" href="https://newft.survivalapp.com/pro/17111/construction-email-ad"
+                  target="_blank" rel="noreferrer">
+                  <h2> Construction Email Ad Template </h2>
+                </a> <span class="price-tag">PRO</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Interactive Design Website Template"
+                    data-parentcategoryid="" data-productid="45302" data-editorurl="" data-category="" class="tracker"
+                    data-event-action="Product Lists" data-event-label="PRO Product"
+                    href="https://newft.survivalapp.com/pro/45302/interactive-design-website" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/45302/Interactive-Design-Website.jpg"
+                      srcset="https://images.template.net/45302/Interactive-Design-Website.jpg?width=220, https://images.template.net/45302/Interactive-Design-Website.jpg 2x"
+                      style="width:220px;height:285px;" alt="Interactive Design Website Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Interactive Design Website Template"
+                  data-productid="45302" data-category="" class="tracker" data-event-action="Product Lists"
+                  data-event-label="PRO Product"
+                  href="https://newft.survivalapp.com/pro/45302/interactive-design-website" target="_blank"
+                  rel="noreferrer">
+                  <h2> Interactive Design Website Template </h2>
+                </a> <span class="price-tag">PRO</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Funny Journal Template"
+                    data-parentcategoryid="" data-productid="1156" data-editorurl=""
+                    data-category="Notebook &amp; Journals" class="tracker" data-event-action="Product Lists"
+                    data-event-label="FREE Product" href="https://newft.survivalapp.com/editable/1156/funny-journal"
+                    target="_blank" rel="noreferrer"><img
+                      src="https://images.template.net/1156/Free-Funny-Journal-Template-440x570-1.jpg"
+                      srcset="https://images.template.net/1156/Free-Funny-Journal-Template-440x570-1.jpg?width=220, https://images.template.net/1156/Free-Funny-Journal-Template-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Funny Journal Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Funny Journal Template" data-productid="1156"
+                  data-category="Notebook &amp; Journals" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product" href="https://newft.survivalapp.com/editable/1156/funny-journal"
+                  target="_blank" rel="noreferrer">
+                  <h2> Free Funny Journal Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Modern Sales Proposal Template"
+                    data-parentcategoryid="" data-productid="36903" data-editorurl="" data-category="Proposals"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/36903/modern-sales-proposal" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/36903/Modern-Sales-Proposal.jpg"
+                      srcset="https://images.template.net/36903/Modern-Sales-Proposal.jpg?width=220, https://images.template.net/36903/Modern-Sales-Proposal.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Modern Sales Proposal Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Modern Sales Proposal Template"
+                  data-productid="36903" data-category="Proposals" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/36903/modern-sales-proposal" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Modern Sales Proposal Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)"
+                    data-title="Free General Contractor Services Proposal Template" data-parentcategoryid=""
+                    data-productid="38467" data-editorurl="" data-category="Proposals" class="tracker"
+                    data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/38467/general-contractor-services-proposal"
+                    target="_blank" rel="noreferrer"><img
+                      src="https://images.template.net/38467/general-contractor-services-proposal.jpg"
+                      srcset="https://images.template.net/38467/general-contractor-services-proposal.jpg?width=220, https://images.template.net/38467/general-contractor-services-proposal.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free General Contractor Services Proposal Template"> </a>
+                </figure><a onclick="sendProductClickEvent(this)"
+                  data-title="Free General Contractor Services Proposal Template" data-productid="38467"
+                  data-category="Proposals" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/38467/general-contractor-services-proposal"
+                  target="_blank" rel="noreferrer">
+                  <h2> Free General Contractor Services Proposal Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Student Yearbook Ad Template"
+                    data-parentcategoryid="" data-productid="18423" data-editorurl="" data-category="Banners"
+                    class="tracker" data-event-action="Product Lists" data-event-label="PRO Product"
+                    href="https://newft.survivalapp.com/pro/18423/student-yearbook-ad" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/18423/Student-Yearbook-Ad.jpg"
+                      srcset="https://images.template.net/18423/Student-Yearbook-Ad.jpg?width=220, https://images.template.net/18423/Student-Yearbook-Ad.jpg 2x"
+                      style="width:220px;height:285px;" alt="Student Yearbook Ad Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Student Yearbook Ad Template" data-productid="18423"
+                  data-category="Banners" class="tracker" data-event-action="Product Lists"
+                  data-event-label="PRO Product" href="https://newft.survivalapp.com/pro/18423/student-yearbook-ad"
+                  target="_blank" rel="noreferrer">
+                  <h2> Student Yearbook Ad Template </h2>
+                </a> <span class="price-tag">PRO</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Sample Event Media Kit"
+                    data-parentcategoryid="" data-productid="4219" data-editorurl="" data-category="Media Kits"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/4219/event-media-kit" target="_blank"
+                    rel="noreferrer"><img
+                      src="https://images.template.net/4219/Free-Sample-Event-Media-Kit-440x570-1.jpg"
+                      srcset="https://images.template.net/4219/Free-Sample-Event-Media-Kit-440x570-1.jpg?width=220, https://images.template.net/4219/Free-Sample-Event-Media-Kit-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Sample Event Media Kit"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Sample Event Media Kit" data-productid="4219"
+                  data-category="Media Kits" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product" href="https://newft.survivalapp.com/editable/4219/event-media-kit"
+                  target="_blank" rel="noreferrer">
+                  <h2> Free Sample Event Media Kit </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Clothing Tag Template"
+                    data-parentcategoryid="" data-productid="447" data-editorurl="" data-category="Tags" class="tracker"
+                    data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/447/clothing-tag" target="_blank" rel="noreferrer"><img
+                      src="https://images.template.net/447/Free-Clothing-Tag-Template-440x570-1.jpg"
+                      srcset="https://images.template.net/447/Free-Clothing-Tag-Template-440x570-1.jpg?width=220, https://images.template.net/447/Free-Clothing-Tag-Template-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Clothing Tag Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Clothing Tag Template" data-productid="447"
+                  data-category="Tags" class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/447/clothing-tag" target="_blank" rel="noreferrer">
+                  <h2> Free Clothing Tag Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Weekly School Plan Mind Map Template"
+                    data-parentcategoryid="" data-productid="5962" data-editorurl="" data-category="Charts"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/5962/weekly-school-plan-mind-map" target="_blank"
+                    rel="noreferrer"><img
+                      src="https://images.template.net/5962/Free-Weekly-School-Plan-Mind-Map-Template-440x570-1.jpg"
+                      srcset="https://images.template.net/5962/Free-Weekly-School-Plan-Mind-Map-Template-440x570-1.jpg?width=220, https://images.template.net/5962/Free-Weekly-School-Plan-Mind-Map-Template-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Weekly School Plan Mind Map Template"> </a> </figure>
+                <a onclick="sendProductClickEvent(this)" data-title="Free Weekly School Plan Mind Map Template"
+                  data-productid="5962" data-category="Charts" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/5962/weekly-school-plan-mind-map" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Weekly School Plan Mind Map Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Daily Hourly Schedule Template"
+                    data-parentcategoryid="" data-productid="3229" data-editorurl="" data-category="Schedule"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/3229/daily-hourly-schedule" target="_blank"
+                    rel="noreferrer"><img
+                      src="https://images.template.net/3229/Free-Daily-Hourly-Schedule-Template1.jpg"
+                      srcset="https://images.template.net/3229/Free-Daily-Hourly-Schedule-Template1.jpg?width=220, https://images.template.net/3229/Free-Daily-Hourly-Schedule-Template1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Daily Hourly Schedule Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Daily Hourly Schedule Template"
+                  data-productid="3229" data-category="Schedule" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/3229/daily-hourly-schedule" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Daily Hourly Schedule Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Art Exhibition Catalogue Template"
+                    data-parentcategoryid="" data-productid="35174" data-editorurl="" data-category="Catalogs"
+                    class="tracker" data-event-action="Product Lists" data-event-label="PRO Product"
+                    href="https://newft.survivalapp.com/pro/35174/art-exhibition-catalogue" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/35174/Art-Exhibition-Catalogue.jpg"
+                      srcset="https://images.template.net/35174/Art-Exhibition-Catalogue.jpg?width=220, https://images.template.net/35174/Art-Exhibition-Catalogue.jpg 2x"
+                      style="width:220px;height:285px;" alt="Art Exhibition Catalogue Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Art Exhibition Catalogue Template"
+                  data-productid="35174" data-category="Catalogs" class="tracker" data-event-action="Product Lists"
+                  data-event-label="PRO Product" href="https://newft.survivalapp.com/pro/35174/art-exhibition-catalogue"
+                  target="_blank" rel="noreferrer">
+                  <h2> Art Exhibition Catalogue Template </h2>
+                </a> <span class="price-tag">PRO</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Transport Receipt Template"
+                    data-parentcategoryid="" data-productid="4012" data-editorurl="" data-category="Receipts"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/4012/transport-receipt" target="_blank"
+                    rel="noreferrer"><img
+                      src="https://images.template.net/4012/Free-Transport-Receipt-Template-440x570-1.jpg"
+                      srcset="https://images.template.net/4012/Free-Transport-Receipt-Template-440x570-1.jpg?width=220, https://images.template.net/4012/Free-Transport-Receipt-Template-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Transport Receipt Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Transport Receipt Template"
+                  data-productid="4012" data-category="Receipts" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product" href="https://newft.survivalapp.com/editable/4012/transport-receipt"
+                  target="_blank" rel="noreferrer">
+                  <h2> Free Transport Receipt Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Simple HR Presentation Template"
+                    data-parentcategoryid="" data-productid="44342" data-editorurl="" data-category="Presentations"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/44342/simple-hr-presentation" target="_blank"
+                    rel="noreferrer"><img
+                      src="https://images.template.net/44342/Free-Simple-HR-Presentation-Template-Format.jpg"
+                      srcset="https://images.template.net/44342/Free-Simple-HR-Presentation-Template-Format.jpg?width=220, https://images.template.net/44342/Free-Simple-HR-Presentation-Template-Format.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Simple HR Presentation Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Simple HR Presentation Template"
+                  data-productid="44342" data-category="Presentations" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/44342/simple-hr-presentation" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Simple HR Presentation Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Vintage Blank Coupon Template"
+                    data-parentcategoryid="" data-productid="12222" data-editorurl="" data-category="Vouchers"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/12222/vintage-blank-coupon" target="_blank"
+                    rel="noreferrer"><img
+                      src="https://images.template.net/12222/Vintage-Blank-Coupon-Template-440x570-1.jpg"
+                      srcset="https://images.template.net/12222/Vintage-Blank-Coupon-Template-440x570-1.jpg?width=220, https://images.template.net/12222/Vintage-Blank-Coupon-Template-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Vintage Blank Coupon Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Vintage Blank Coupon Template"
+                  data-productid="12222" data-category="Vouchers" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/12222/vintage-blank-coupon" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Vintage Blank Coupon Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Hotel Media Kit Template"
+                    data-parentcategoryid="" data-productid="4122" data-editorurl="" data-category="Media Kits"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/4122/hotel-media-kit" target="_blank"
+                    rel="noreferrer"><img
+                      src="https://images.template.net/4122/Free-Hotel-Media-Kit-Template-440x570-1.jpg"
+                      srcset="https://images.template.net/4122/Free-Hotel-Media-Kit-Template-440x570-1.jpg?width=220, https://images.template.net/4122/Free-Hotel-Media-Kit-Template-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Hotel Media Kit Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Hotel Media Kit Template" data-productid="4122"
+                  data-category="Media Kits" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product" href="https://newft.survivalapp.com/editable/4122/hotel-media-kit"
+                  target="_blank" rel="noreferrer">
+                  <h2> Free Hotel Media Kit Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free UX Designer Resume Template"
+                    data-parentcategoryid="" data-productid="125" data-editorurl="" data-category="Resume"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/125/ux-designer-resume" target="_blank"
+                    rel="noreferrer"><img
+                      src="https://images.template.net/125/Free-UX-Designer-Resume-Template-440x570-1.jpg"
+                      srcset="https://images.template.net/125/Free-UX-Designer-Resume-Template-440x570-1.jpg?width=220, https://images.template.net/125/Free-UX-Designer-Resume-Template-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free UX Designer Resume Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free UX Designer Resume Template"
+                  data-productid="125" data-category="Resume" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product" href="https://newft.survivalapp.com/editable/125/ux-designer-resume"
+                  target="_blank" rel="noreferrer">
+                  <h2> Free UX Designer Resume Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Food Restaurant WordPress Theme/Template"
+                    data-parentcategoryid="" data-productid="45566" data-editorurl="" data-category="" class="tracker"
+                    data-event-action="Product Lists" data-event-label="PRO Product"
+                    href="https://newft.survivalapp.com/pro/45566/food-restaurant-wordpress" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/45566/Food-Restaurant-WordPress-Theme.jpg"
+                      srcset="https://images.template.net/45566/Food-Restaurant-WordPress-Theme.jpg?width=220, https://images.template.net/45566/Food-Restaurant-WordPress-Theme.jpg 2x"
+                      style="width:220px;height:285px;" alt="Food Restaurant WordPress Theme/Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Food Restaurant WordPress Theme/Template"
+                  data-productid="45566" data-category="" class="tracker" data-event-action="Product Lists"
+                  data-event-label="PRO Product"
+                  href="https://newft.survivalapp.com/pro/45566/food-restaurant-wordpress" target="_blank"
+                  rel="noreferrer">
+                  <h2> Food Restaurant WordPress Theme/Template </h2>
+                </a> <span class="price-tag">PRO PLUS</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free HR Admin Website Template"
+                    data-parentcategoryid="" data-productid="43902" data-editorurl="" data-category="Websites"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/43902/hr-admin-website" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/43902/HR-Admin-Website.jpg"
+                      srcset="https://images.template.net/43902/HR-Admin-Website.jpg?width=220, https://images.template.net/43902/HR-Admin-Website.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free HR Admin Website Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free HR Admin Website Template"
+                  data-productid="43902" data-category="Websites" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product" href="https://newft.survivalapp.com/editable/43902/hr-admin-website"
+                  target="_blank" rel="noreferrer">
+                  <h2> Free HR Admin Website Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Blank Construction Form Template"
+                    data-parentcategoryid="" data-productid="37273" data-editorurl="" data-category="Forms"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/37273/blank-construction-form" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/37273/Blank-Construction-Form--Format.jpg"
+                      srcset="https://images.template.net/37273/Blank-Construction-Form--Format.jpg?width=220, https://images.template.net/37273/Blank-Construction-Form--Format.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Blank Construction Form Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Blank Construction Form Template"
+                  data-productid="37273" data-category="Forms" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/37273/blank-construction-form" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Blank Construction Form Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)"
+                    data-title="Free One Page Construction Website Template" data-parentcategoryid=""
+                    data-productid="37257" data-editorurl="" data-category="Websites" class="tracker"
+                    data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/37257/one-page-construction-website" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/37257/One-Page-Construction-Website-1.jpg"
+                      srcset="https://images.template.net/37257/One-Page-Construction-Website-1.jpg?width=220, https://images.template.net/37257/One-Page-Construction-Website-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free One Page Construction Website Template"> </a>
+                </figure>
+                <a onclick="sendProductClickEvent(this)" data-title="Free One Page Construction Website Template"
+                  data-productid="37257" data-category="Websites" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/37257/one-page-construction-website" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free One Page Construction Website Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Modern College Magazine Template"
+                    data-parentcategoryid="" data-productid="37196" data-editorurl="" data-category="Magazines"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/37196/modern-college-magazine" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/37196/Modern-College-Magazine-2.jpg"
+                      srcset="https://images.template.net/37196/Modern-College-Magazine-2.jpg?width=220, https://images.template.net/37196/Modern-College-Magazine-2.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Modern College Magazine Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Modern College Magazine Template"
+                  data-productid="37196" data-category="Magazines" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/37196/modern-college-magazine" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Modern College Magazine Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Staff Meeting Memo Template"
+                    data-parentcategoryid="" data-productid="4002" data-editorurl="" data-category="Memo"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/4002/staff-meeting-memo" target="_blank"
+                    rel="noreferrer"><img
+                      src="https://images.template.net/4002/Free-Staff-Meeting-Memo-Template-440x570-1.jpg"
+                      srcset="https://images.template.net/4002/Free-Staff-Meeting-Memo-Template-440x570-1.jpg?width=220, https://images.template.net/4002/Free-Staff-Meeting-Memo-Template-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Staff Meeting Memo Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Staff Meeting Memo Template"
+                  data-productid="4002" data-category="Memo" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product" href="https://newft.survivalapp.com/editable/4002/staff-meeting-memo"
+                  target="_blank" rel="noreferrer">
+                  <h2> Free Staff Meeting Memo Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)"
+                    data-title="Free Training and Development Policy Template" data-parentcategoryid=""
+                    data-productid="44562" data-editorurl="" data-category="Policy" class="tracker"
+                    data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/44562/training-and-development-policy" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/44562/Training-and-development-policy.jpg"
+                      srcset="https://images.template.net/44562/Training-and-development-policy.jpg?width=220, https://images.template.net/44562/Training-and-development-policy.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Training and Development Policy Template"> </a>
+                </figure><a onclick="sendProductClickEvent(this)"
+                  data-title="Free Training and Development Policy Template" data-productid="44562"
+                  data-category="Policy" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/44562/training-and-development-policy" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Training and Development Policy Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Creative Photo Frame Template "
+                    data-parentcategoryid="" data-productid="33749" data-editorurl=""
+                    data-category="Photo Frame Templates" class="tracker" data-event-action="Product Lists"
+                    data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/33749/creative-photo-frame" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/33749/Creative-Photo-Frame.jpg"
+                      srcset="https://images.template.net/33749/Creative-Photo-Frame.jpg?width=220, https://images.template.net/33749/Creative-Photo-Frame.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Creative Photo Frame Template "> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Creative Photo Frame Template "
+                  data-productid="33749" data-category="Photo Frame Templates" class="tracker"
+                  data-event-action="Product Lists" data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/33749/creative-photo-frame" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Creative Photo Frame Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Home Care Tri-Fold Brochure Template"
+                    data-parentcategoryid="" data-productid="16824" data-editorurl="" data-category="Brochures"
+                    class="tracker" data-event-action="Product Lists" data-event-label="PRO Product"
+                    href="https://newft.survivalapp.com/pro/16824/home-care-tri-fold-brochure" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/16824/Home-Care-Tri-440x570-1.jpg"
+                      srcset="https://images.template.net/16824/Home-Care-Tri-440x570-1.jpg?width=220, https://images.template.net/16824/Home-Care-Tri-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Home Care Tri-Fold Brochure Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Home Care Tri-Fold Brochure Template"
+                  data-productid="16824" data-category="Brochures" class="tracker" data-event-action="Product Lists"
+                  data-event-label="PRO Product"
+                  href="https://newft.survivalapp.com/pro/16824/home-care-tri-fold-brochure" target="_blank"
+                  rel="noreferrer">
+                  <h2> Home Care Tri-Fold Brochure Template </h2>
+                </a> <span class="price-tag">PRO</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Past Due Notice Template"
+                    data-parentcategoryid="" data-productid="5104" data-editorurl="" data-category="Notice"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/5104/past-due-notice-template" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/5104/Past-Due-Notice-Template-3.jpg"
+                      srcset="https://images.template.net/5104/Past-Due-Notice-Template-3.jpg?width=220, https://images.template.net/5104/Past-Due-Notice-Template-3.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Past Due Notice Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Past Due Notice Template" data-productid="5104"
+                  data-category="Notice" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/5104/past-due-notice-template" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Past Due Notice Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Editable Journal Planner Template"
+                    data-parentcategoryid="" data-productid="37524" data-editorurl="" data-category="Planners"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/37524/editable-journal-planner" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/37524/Editable-Journal-planner-1.jpg"
+                      srcset="https://images.template.net/37524/Editable-Journal-planner-1.jpg?width=220, https://images.template.net/37524/Editable-Journal-planner-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Editable Journal Planner Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Editable Journal Planner Template"
+                  data-productid="37524" data-category="Planners" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/37524/editable-journal-planner" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Editable Journal Planner Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Coffee Menu Template"
+                    data-parentcategoryid="" data-productid="5774" data-editorurl="" data-category="Menu"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/5774/coffee-menu" target="_blank" rel="noreferrer"><img
+                      src="https://images.template.net/5774/Free-Coffee-Menu-Template-440x570-1.jpg"
+                      srcset="https://images.template.net/5774/Free-Coffee-Menu-Template-440x570-1.jpg?width=220, https://images.template.net/5774/Free-Coffee-Menu-Template-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Coffee Menu Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Coffee Menu Template" data-productid="5774"
+                  data-category="Menu" class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/5774/coffee-menu" target="_blank" rel="noreferrer">
+                  <h2> Free Coffee Menu Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Sports Rack Card Template"
+                    data-parentcategoryid="" data-productid="3655" data-editorurl="" data-category="Rack Cards"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/3655/sports-rack-card" target="_blank"
+                    rel="noreferrer"><img
+                      src="https://images.template.net/3655/Free-Sports-Rack-Card-Template-440x570-1.jpg"
+                      srcset="https://images.template.net/3655/Free-Sports-Rack-Card-Template-440x570-1.jpg?width=220, https://images.template.net/3655/Free-Sports-Rack-Card-Template-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Sports Rack Card Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Sports Rack Card Template"
+                  data-productid="3655" data-category="Rack Cards" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product" href="https://newft.survivalapp.com/editable/3655/sports-rack-card"
+                  target="_blank" rel="noreferrer">
+                  <h2> Free Sports Rack Card Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Gym PSD Landing page Template"
+                    data-parentcategoryid="" data-productid="21859" data-editorurl="" data-category="Website Templates"
+                    class="tracker" data-event-action="Product Lists" data-event-label="PRO Product"
+                    href="https://newft.survivalapp.com/pro/21859/gym-psd-landing-page" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/21859/Gym-PSD-Landing-page-Template.jpg"
+                      srcset="https://images.template.net/21859/Gym-PSD-Landing-page-Template.jpg?width=220, https://images.template.net/21859/Gym-PSD-Landing-page-Template.jpg 2x"
+                      style="width:220px;height:285px;" alt="Gym PSD Landing page Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Gym PSD Landing page Template"
+                  data-productid="21859" data-category="Website Templates" class="tracker"
+                  data-event-action="Product Lists" data-event-label="PRO Product"
+                  href="https://newft.survivalapp.com/pro/21859/gym-psd-landing-page" target="_blank" rel="noreferrer">
+                  <h2> Gym PSD Landing page Template </h2>
+                </a> <span class="price-tag">PRO PLUS</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Blank Appointment Schedule Template"
+                    data-parentcategoryid="" data-productid="6142" data-editorurl="" data-category="Schedule"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/6142/blank-appointment-schedule" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/6142/Blank-Appointment-Schedule-Template.jpg"
+                      srcset="https://images.template.net/6142/Blank-Appointment-Schedule-Template.jpg?width=220, https://images.template.net/6142/Blank-Appointment-Schedule-Template.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Blank Appointment Schedule Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Blank Appointment Schedule Template"
+                  data-productid="6142" data-category="Schedule" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/6142/blank-appointment-schedule" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Blank Appointment Schedule Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Birthday Gift Tag Template"
+                    data-parentcategoryid="" data-productid="4794" data-editorurl="" data-category="Tags"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/4794/birthday-gift-tag" target="_blank"
+                    rel="noreferrer"><img
+                      src="https://images.template.net/4794/Free-Birthday-Gift-Tag-Template-440x570-1.jpg"
+                      srcset="https://images.template.net/4794/Free-Birthday-Gift-Tag-Template-440x570-1.jpg?width=220, https://images.template.net/4794/Free-Birthday-Gift-Tag-Template-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Birthday Gift Tag Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Birthday Gift Tag Template"
+                  data-productid="4794" data-category="Tags" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product" href="https://newft.survivalapp.com/editable/4794/birthday-gift-tag"
+                  target="_blank" rel="noreferrer">
+                  <h2> Free Birthday Gift Tag Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Web Design Agency Website Template"
+                    data-parentcategoryid="" data-productid="45293" data-editorurl="" data-category="" class="tracker"
+                    data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/45293/web-design-agency-website" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/45293/Web-Design-Agency-Website.jpg"
+                      srcset="https://images.template.net/45293/Web-Design-Agency-Website.jpg?width=220, https://images.template.net/45293/Web-Design-Agency-Website.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Web Design Agency Website Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Web Design Agency Website Template"
+                  data-productid="45293" data-category="" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/45293/web-design-agency-website" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Web Design Agency Website Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Job Advertising Flyer Template"
+                    data-parentcategoryid="" data-productid="16138" data-editorurl="" data-category="Flyers"
+                    class="tracker" data-event-action="Product Lists" data-event-label="PRO Product"
+                    href="https://newft.survivalapp.com/pro/16138/job-advertising-flyer" target="_blank"
+                    rel="noreferrer"><img
+                      src="https://images.template.net/16138/Job-Advertising-Flyer-Template-440x570-1.jpg"
+                      srcset="https://images.template.net/16138/Job-Advertising-Flyer-Template-440x570-1.jpg?width=220, https://images.template.net/16138/Job-Advertising-Flyer-Template-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Job Advertising Flyer Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Job Advertising Flyer Template"
+                  data-productid="16138" data-category="Flyers" class="tracker" data-event-action="Product Lists"
+                  data-event-label="PRO Product" href="https://newft.survivalapp.com/pro/16138/job-advertising-flyer"
+                  target="_blank" rel="noreferrer">
+                  <h2> Job Advertising Flyer Template </h2>
+                </a> <span class="price-tag">PRO</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Business Rental Agreement Template"
+                    data-parentcategoryid="" data-productid="10798" data-editorurl="" data-category="Agreements"
+                    class="tracker" data-event-action="Product Lists" data-event-label="PRO Product"
+                    href="https://newft.survivalapp.com/pro/10798/business-rental-agreement" target="_blank"
+                    rel="noreferrer"><img src="https://images.template.net/10798/Business-Rental-Agreement.jpg"
+                      srcset="https://images.template.net/10798/Business-Rental-Agreement.jpg?width=220, https://images.template.net/10798/Business-Rental-Agreement.jpg 2x"
+                      style="width:220px;height:285px;" alt="Business Rental Agreement Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Business Rental Agreement Template"
+                  data-productid="10798" data-category="Agreements" class="tracker" data-event-action="Product Lists"
+                  data-event-label="PRO Product"
+                  href="https://newft.survivalapp.com/pro/10798/business-rental-agreement" target="_blank"
+                  rel="noreferrer">
+                  <h2> Business Rental Agreement Template </h2>
+                </a> <span class="price-tag">PRO PLUS</span>
+              </div>
+            </li>
+            <li class="grid-item">
+              <div class="item free animated">
+                <figure> <a onclick="sendProductClickEvent(this)" data-title="Free Fashion Designer Resume Template"
+                    data-parentcategoryid="" data-productid="120" data-editorurl="" data-category="Resume"
+                    class="tracker" data-event-action="Product Lists" data-event-label="FREE Product"
+                    href="https://newft.survivalapp.com/editable/120/fashion-designer-resume" target="_blank"
+                    rel="noreferrer"><img
+                      src="https://images.template.net/120/Free-Fashion-Designer-Resume-Template-440x570-1.jpg"
+                      srcset="https://images.template.net/120/Free-Fashion-Designer-Resume-Template-440x570-1.jpg?width=220, https://images.template.net/120/Free-Fashion-Designer-Resume-Template-440x570-1.jpg 2x"
+                      style="width:220px;height:285px;" alt="Free Fashion Designer Resume Template"> </a> </figure><a
+                  onclick="sendProductClickEvent(this)" data-title="Free Fashion Designer Resume Template"
+                  data-productid="120" data-category="Resume" class="tracker" data-event-action="Product Lists"
+                  data-event-label="FREE Product"
+                  href="https://newft.survivalapp.com/editable/120/fashion-designer-resume" target="_blank"
+                  rel="noreferrer">
+                  <h2> Free Fashion Designer Resume Template </h2>
+                </a> <span class="price-tag">FREE</span>
+              </div>
+            </li>
+          </ul>
+          <div class="button-sec"><button class="blue-btn more-btn" onclick="loadMoreHomePageClick(this)">Browse More
+              Templates</button>
+            <div class="loadmore"></div>
+          </div>
+        </div>
+      </div>
+      <aside class="side-bar category-list ">
+        <div class="Templates part">
+          <h3>Templates</h3>
+          <ul>
+            <li><span class="link"> Accounting Templates</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/accounting-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Accounting Templates">- All</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/accounting-invoices" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Accounting Invoices">- Accounting
+                    Invoices</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/bookkeeping" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Bookkeeping">- Bookkeeping</a></li>
+              </ul>
+            </li>
+            <li><span class="link"> Credit &amp; Collection</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/credit-collection" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Credit &amp; Collection">- All</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/credit" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Credit">- Credit</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/collection" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Collection">- Collection</a></li>
+              </ul>
+            </li>
+            <li><span class="link"> Documents</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/documents" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Documents">- All</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/agreements" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Agreements">- Agreements</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/contracts" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Contracts">- Contracts</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/notice-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Notice Templates">- Notice
+                    Templates</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/memo-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Memo Templates">- Memo Templates</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/statements" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Statements">- Statements</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/invoices" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Invoices">- Invoices</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/order-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Order Templates">- Order Templates</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/receipts" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Receipts">- Receipts</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/sheets" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Sheets">- Sheets</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/plans" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Plans">- Plans</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/proposals" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Proposals">- Proposals</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/checklists" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Checklists">- Checklists</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/analysis" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Analysis">- Analysis</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/reports" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Reports">- Reports</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/surveys" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Surveys">- Surveys</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/quotations" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Quotations">- Quotations</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/letters" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Letters">- Letters</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/resumes" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Resumes">- Resumes</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/budget-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Budget Templates">- Budget
+                    Templates</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/meeting-minutes" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Meeting Minutes ">- Meeting Minutes
+                  </a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/schedule" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Schedule ">- Schedule </a></li>
+                <li><a href="https://newft.survivalapp.com/editable/itinerary" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Itinerary">- Itinerary</a></li>
+              </ul>
+            </li>
+            <li><span class="link"> Finance Templates</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/finance-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Finance Templates">- All</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/banking" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Banking">- Banking</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/debts-default" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Debts &amp; Default">- Debts &amp;
+                    Default</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/guarantees" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Guarantees">- Guarantees</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/loan-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Loan Templates">- Loan Templates</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/promissory-note-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Promissory Note Templates">- Promissory
+                    Note Templates</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/payments-to-creditors" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Payments to Creditors">- Payments to
+                    Creditors</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/finance-statements" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Finance Statements">- Finance
+                    Statements</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/buying-selling" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Buying &amp; Selling">- Buying &amp;
+                    Selling</a></li>
+              </ul>
+            </li>
+            <li><span class="link"> Graphic Templates</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/graphic-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Graphic Templates">- All</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/certificates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Certificates">- Certificates</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/brochures" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Brochures">- Brochures</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/email-signatures" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Email Signatures">- Email
+                    Signatures</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/flyers" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Flyers">- Flyers</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/invitations" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Invitations">- Invitations</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/posters" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Posters">- Posters</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/calendars" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Calendars">- Calendars</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/cards" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Cards">- Cards</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/vouchers" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Vouchers">- Vouchers</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/menus" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Menu">- Menu</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/coupons" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Coupons">- Coupons</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/ticket-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Ticket Templates">- Ticket
+                    Templates</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/banners" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Banners">- Banners</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/newspaper-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Newspaper Templates">- Newspaper
+                    Templates</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/roll-up-banner" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Roll-Up Banner">- Roll-Up Banner</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/email-ads" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Email Ads">- Email Ads</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/newsletters" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Newsletters">- Newsletters</a></li>
+              </ul>
+            </li>
+            <li><span class="link"> HR Templates</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/hr-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="HR Templates">- All</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/training-manual" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Training Manual">- Training Manual</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/employee-letters" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Employee Letters">- Employee
+                    Letters</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/recruiting-hiring" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Recruiting &amp; Hiring">- Recruiting
+                    &amp; Hiring</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/hr-policies" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="HR Policies">- HR Policies</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/job-descriptions" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Job Descriptions">- Job
+                    Descriptions</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/insurance" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Insurance">- Insurance</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/compensation-benefits" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Compensation &amp; Benefits">-
+                    Compensation &amp; Benefits</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/managing-motivating" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Managing &amp; Motivating">- Managing
+                    &amp; Motivating</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/firing-termination" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Firing &amp; Termination">- Firing
+                    &amp;
+                    Termination</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/hr-agreements" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="HR Agreements">- HR Agreements</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/hr-forms" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="HR Forms">- HR Forms</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/hr-checklists" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="HR Checklists">- HR Checklists</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/reference-letters" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Reference Letters">- Reference
+                    Letters</a></li>
+              </ul>
+            </li>
+            <li><span class="link"> Internet &amp; Technology Templates</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/internet-technology-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Internet &amp; Technology Templates">-
+                    All</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/copyright-agreements" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Copyright Agreements">- Copyright
+                    Agreements</a></li>
+              </ul>
+            </li>
+            <li><span class="link"> Legal Templates</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/legal-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Legal Templates">- All</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/legal-agreements" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Legal Agreements">- Legal
+                    Agreements</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/legal-incorporation" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Legal Incorporation">- Legal
+                    Incorporation</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/legal-deeds" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Legal Deeds">- Legal Deeds</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/litigations" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Litigations">- Litigations</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/legal-assignments" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Legal Assignments">- Legal
+                    Assignments</a></li>
+              </ul>
+            </li>
+            <li><span class="link"> Logos</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/logos" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Logos">- All</a></li>
+              </ul>
+            </li>
+            <li><span class="link"> Marketing Templates</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/marketing-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Marketing Templates">- All</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/marketing-proposals" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Marketing Proposals">- Marketing
+                    Proposals</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/marketing-analysis" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Marketing Analysis">- Marketing
+                    Analysis</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/planning" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Planning">- Planning</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/marketing-presentations" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Marketing Presentations">- Marketing
+                    Presentations</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/press-and-pr" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Press and PR">- Press and PR</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/marketing-agreements" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Marketing Agreements">- Marketing
+                    Agreements</a></li>
+              </ul>
+            </li>
+            <li><span class="link"> Planning &amp; Management</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/planning-management" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Planning &amp; Management">- All</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/management" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Management">- Management</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/business-plans" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Business Plans">- Business Plans</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/board-of-directors" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Board of Directors">- Board of
+                    Directors</a></li>
+              </ul>
+            </li>
+            <li><span class="link"> Presentations</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/presentations" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Presentations">- All</a></li>
+              </ul>
+            </li>
+            <li><span class="link"> Print Templates</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/print-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Print Templates">- All</a></li>
+              </ul>
+            </li>
+            <li><span class="link"> Sales Templates</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/sales-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Sales Templates">- All</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/sales-letters" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Sales Letters">- Sales Letters</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/sales-agreements" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Sales Agreements">- Sales
+                    Agreements</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/sales-customer-service" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Sales Customer Service">- Sales
+                    Customer
+                    Service</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/purchase-orders" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Purchase Orders">- Purchase Orders</a>
+                </li>
+              </ul>
+            </li>
+            <li><span class="link"> Social Media Templates</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/social-media-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Social Media Templates">- All</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/snapchat-geofilters" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Snapchat Geofilters">- Snapchat
+                    Geofilters</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/instagram-ads" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Instagram Ads">- Instagram Ads</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/facebook" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Facebook Ads">- Facebook Ads</a></li>
+              </ul>
+            </li>
+            <li><span class="link"> Stationery</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/stationery" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Stationery">- All</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/business-cards" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Business Cards">- Business Cards</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/fax-covers" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Fax Covers">- Fax Covers</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/letterheads" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Letterheads">- Letterheads</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/envelopes" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Envelopes">- Envelopes</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/id-cards" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="ID Cards">- ID Cards</a></li>
+              </ul>
+            </li>
+            <li><span class="link"> Website Templates</span>
+              <ul class="drop-category">
+                <li><a href="https://newft.survivalapp.com/editable/website-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Website Templates">- All</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/wordpress-themes" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="WordPress Themes">- WordPress
+                    Themes</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/website-headers" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Website Headers">- Website Headers</a>
+                </li>
+                <li><a href="https://newft.survivalapp.com/editable/blog-headers" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Blog Headers">- Blog Headers</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/landing-pages" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Landing Pages">- Landing Pages</a></li>
+                <li><a href="https://newft.survivalapp.com/editable/bootstrap-templates" class="tracker"
+                    data-event-action="Sidebar Category Links" data-event-label="Bootstrap Templates">- Bootstrap
+                    Templates</a></li>
+              </ul>
+            </li>
+          </ul> <span class="load-more">More...</span>
+        </div>
+        <div class="file-formats part">
+          <h3>File Formats</h3>
+          <ul>
+            <li><a href="https://newft.survivalapp.com/editable/word" class="link"> MS Word</a></li>
+            <li><a href="https://newft.survivalapp.com/editable/google-docs" class="link"> Google Docs</a></li>
+            <li><a href="https://newft.survivalapp.com/editable/psd" class="link"> Photoshop</a></li>
+            <li><a href="https://newft.survivalapp.com/editable/pdf" class="link"> PDF</a></li>
+            <li><a href="https://newft.survivalapp.com/editable/excel" class="link"> MS Excel</a></li>
+            <li><a href="https://newft.survivalapp.com/editable/google-sheets" class="link"> Google Sheets</a></li>
+            <li><a href="https://newft.survivalapp.com/editable/illustrator" class="link"> Illustrator</a></li>
+            <li><a href="https://newft.survivalapp.com/editable/html" class="link"> HTML5</a></li>
+            <li><a href="https://newft.survivalapp.com/editable/indesign" class="link"> InDesign</a></li>
+            <li><a href="https://newft.survivalapp.com/editable/publisher" class="link"> Publisher</a></li>
+            <li><a href="https://newft.survivalapp.com/editable/pages" class="link"> Pages</a></li>
+            <li><a href="https://newft.survivalapp.com/editable/numbers" class="link"> Numbers</a></li>
+            <li><a href="https://newft.survivalapp.com/editable/wordpress" class="link"> Wordpress</a></li>
+            <li><a href="https://newft.survivalapp.com/editable/google-slides" class="link"> Google Slides</a></li>
+          </ul> <span class="load-more">More...</span>
+        </div>
+      </aside>
+    </div>
+    <div class="container">
+
+      <div class="content-sec">
+        <div class="content mheight collapse">
+          <p>Welcome to Template.net! At Template.net we create Premium Designs, Documents for our
+            users. We are a Dedicated Global Team of Coders, Artists, Designers, Lawyers, Marketers &amp; Writers. We
+            are
+            working
+            towards
+            one goal of making the world’s work get done Faster and Smarter!</p>
+          <h2>Why Choose Us?</h2>
+          <p>Simple! Why start from Scratch, when you can get your work done faster with our Huge Collection of 100,000+
+            Beautifully designed, Instantly downloadable, Professionally designed, Ready-Made Templates which are easily
+            Editable, Shareable &amp; Printable. Simply Browse, Search, Save &amp; Download our Easy to use Templates..
+          </p>
+          <h2>How Do We Help Your Business?</h2>
+          <p>We Standardize Your Business to help you Create Brand Identity and Visibility, helping you Build Bigger,
+            Better and
+            Faster Business Processes and Improve Productivity through better Organization and Better
+            communication. You Save Time, Money and Frustration, not to mention saving thousands in Designer and Legal
+            Fees. And the bottomline to all these? You Win More Customers with us!</p>
+          <h2>Check out Template.net’s Features:</h2>
+
+          <ul>
+            <li>Instantly Download on Any Device, at Anytime and from Anywhere</li>
+            <li>Access Entire Library of 100,000+ Premium Designs, Documents, Forms &amp; Templates. Available in All
+              possible file Formats: Adobe PDF, Photoshop (PSD), Illustrator (AI), Indesign (IDML &amp; INDD), Microsoft
+              Word (DOC), Excel (XLS), Publisher, PowerPoint (PPT), Apple (MAC) Pages, Apple (MAC) Numbers, Apple (MAC)
+              Keynote, Google Docs, Google Sheets (Spreadsheets), HTML5, WordPress</li>
+            <li>Available in All Possible Sizes</li>
+            <li>All Pro Templates Includes Original Suggestive Headings &amp; Content.</li>
+            <li>Well Layered, 100% Customizable Layouts &amp; Colors</li>
+            <li>Includes Royalty FREE Artwork, Fonts &amp; Images (CCO)</li>
+            <li>All Downloads are your keep Forever</li>
+            <li>Easily Edit, Print as you want</li>
+            <li>Professionally Made by Business Gurus, Lawyers &amp; Expert Designers</li>
+          </ul>
+
+          <h2>And here are the Benefits of Using Template.net:</h2>
+          <ul>
+            <li>Streamlining your business with essential documents such as invoices, receipts, order forms, reports,
+              sales templates, statements and agreements</li>
+            <li>Helps you create charts, data and process flows, prepare sales and marketing presentations</li>
+            <li>Ensure effective content that can deliver projects faster</li>
+            <li>Makes you easily create and customize legally-compliant business documents</li>
+            <li>Helps improve documentations, reports and policy-making tools</li>
+            <li>Aids you in strategizing your next move through market analysis and customer research</li>
+            <li>Easier preparation of sales and marketing presentations</li>
+            <li>Easily creates branding design requirements like logos, brochures and flyers for distribution to
+              potential customers</li>
+            <li>Helps to increase sales with eye-catching banners for display advertisements</li>
+            <li>Gives you the best ideas to package and sell your products with styles that stand out from the
+              competitors</li>
+            <li>Helps maintain brand consistency in a variety of products and services</li>
+            <li>Is an effective tool in creating, launching, and sharing promotional designs and services on social
+              media and other relevant sites</li>
+            <li>Is an invaluable tool when revisiting marketing strategies through customizable sales and marketing
+              templates</li>
+          </ul>
+
+          <h2>Our Users: </h2>
+          <p>10,000,000+ Users Love our Templates. From Small Business to Fortune 500, Millions of Professionals use our
+            ever Growing Library.</p>
+          <p>For any comments regarding existing templates or suggestions for new ones, please <a
+              href="https://www.template.net/contact-us">contact us</a>. We would be happy to hear from you.</p>
+        </div><span class="more-text">More</span>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="category-content" id="homeFooterBannerSection">
+    <div class="start-download-sec">
+      <div class="container">
+        <div class="start-download-sec-content">
+          <h3>Unlimited Template Downloads of<br>100,000+ Ready-Made, Designs, Documents &amp; Templates</h3><a
+            href="/pricing" class="blue-btn btn start-download-sec-btn tracker"
+            data-event-action="Promotional Block CTA Button" data-event-label="" style="">Become a PRO
+            Member<br><span>Unlimited Templates for just $8/ month</span></a>
+          <ul>
+            <li>All Pro Templates include Targeted Original Header, Body Content.</li>
+            <li>Instant Download in Any File Format, File Size, Any Time, Any Where &amp; Any Device</li>
+            <li>Beautifully Designed, Easily Editable Templates to Get your Work Done Faster &amp; Smarter.</li>
+            <li>Simply Browse, Search, Save &amp; Download our Easy to use Templates.</li>
+            <li>All in One Value for Money Template Library to Save Money &amp; Time</li>
+            <li>Templates with Royalty Free Images, Fonts &amp; Artworks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="review-sec">
+    <div class="container">
+      <h3>Our Customers Say it All</h3>
+      <h6>We get Thousands of Positive Feedbacks which helps us Motivate to do Better Everyday</h6>
+      <ul>
+        <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/review-1.png" alt=""
+            src="https://images.template.net/images/img/review-1.png"></li>
+        <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/review-2.png" alt=""
+            src="https://images.template.net/images/img/review-2.png"></li>
+        <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/review-3.png" alt=""
+            src="https://images.template.net/images/img/review-3.png"></li>
+      </ul>
+      <div class="templates-users">
+        <h3>10,000,000+ Users Love our Templates</h3>
+        <h6>From Small Business to Fortune 500, Millions of Professionals use our ever Growing Library.</h6>
+        <ul>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-17.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-17.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-1.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-1.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-2.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-2.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-3.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-3.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-4.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-4.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-20.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-20.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-21.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-21.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-5.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-5.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-6.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-6.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-7.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-7.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-8.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-8.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-24.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-24.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-19.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-19.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-13.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-13.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-14.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-14.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-15.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-15.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-16.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-16.jpg"></li>
+          <li><img class=" lazyloaded" data-src="https://images.template.net/images/img/company-img-18.jpg" alt=""
+              src="https://images.template.net/images/img/company-img-18.jpg"></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/home-footer') %>

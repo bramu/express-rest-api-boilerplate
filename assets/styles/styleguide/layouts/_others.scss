@@ -79,6 +79,7 @@
         content: '';
         width: 20px;
         height: 20px;
+        background: url(https://images.template.net/images/img/pro-icons-42.svg) no-repeat;
         background-position: -557px -222px;
         display: inline-block;
         position: absolute;
@@ -291,49 +292,205 @@
   background: #fff;
   float: left;
   width: 100%;
-  padding: 100px 0;text-align:center;
+  padding: 100px 0;
+  text-align: center;
 
   h3 {
-      font-size: 38px;
-      margin-bottom: 30px;
+    font-size: 38px;
+    margin-bottom: 30px;
   }
 
   h6 {
-      font-size: 18px;
-      font-weight: 400;
-      margin-bottom: 54px;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 54px;
   }
 
   ul {
-      display: flex;
-      flex-wrap: wrap;
-      display: -webkit-flex;
-      margin-bottom: 120px;    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    display: -webkit-flex;
+    margin-bottom: 120px;
+    justify-content: center;
   }
 
   ul li {
-      padding: 0 60px;
+    padding: 0 60px;
 
-      img {
-          max-width: 100%;
-      }
+    img {
+      max-width: 100%;
+    }
   }
 
   .templates-users {
 
-      ul {
-          display: flex;
-          flex-wrap: wrap;
-          margin-bottom: 0;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 0;
 
-          li {
-              width: 16.666%;
-              margin-bottom: 10px;    padding: 0 0px;
+      li {
+        width: 16.666%;
+        margin-bottom: 10px;
+        padding: 0 0px;
 
-              img {
-                  max-width: 100%;
-              }
-          }
+        img {
+          max-width: 100%;
+        }
       }
+    }
   }
+}
+
+.pagenation {
+  width: 100%;
+  float: left;
+  margin-bottom: 60px;
+
+  ul {
+    li {
+      float: left;
+      margin-right: 10px;
+
+      a {
+        background: #fff;
+        border-radius: 3px;
+        padding: 13px 16px;
+        font-size: 14px;
+        font-weight: 600;
+        border: 0;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+        color: #464646;
+        text-align: center;
+
+        &:hover {
+          background: $mcolor;
+          color: #fff;
+        }
+
+        &.active {
+          background: $mcolor;
+          color: #fff;
+        }
+
+        &.inactive {
+          background: #dddddd;
+          pointer-events: none;
+
+          &:hover {
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+}
+
+.landing-faq-sec {
+
+  padding: 0px 0 0px;
+  float: left;
+  width: 100%;
+  margin-bottom: 60px;
+
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #222;
+  }
+
+  .faqBlock h3 {
+    margin-bottom: 15px;
+    color: #222;
+    font-size: 18px;
+  }
+
+  P {
+    margin-bottom: 15PX;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  ul {
+    margin: 0 -10px;
+    display: flex;
+    padding: 0 3px;
+    flex-wrap: wrap;
+
+    li {
+      width: 100%;
+      padding: 0 10px;
+      margin-bottom: 20px;
+
+      .faqBlock {
+        padding: 20px 30px 18px;
+        -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.18);
+        -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.18);
+        box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.18);
+        background: #fff;
+        height: 100%;
+        border-radius: 2px;
+      }
+
+      ul {
+        margin-bottom: 10px;
+
+        li {
+          width: 100%;
+          margin-bottom: 15px;
+          padding-left: 35px;
+
+          &:before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            display: inline-block;
+            background: #5f5f5f;
+            border-radius: 50%;
+            margin: 1px 0px 0 10px;
+            top: 9px;
+          }
+        }
+      }
+
+      ol {
+        margin-bottom: 10px;
+
+        li {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+
+
+      h3 {
+        font-size: 20px;
+
+        font-weight: 600;
+      }
+
+      .drop-down {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #616161;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+
+
+      }
+
+      &:before {
+        display: none;
+      }
+
+    }
+
+  }
+
 }

@@ -101,6 +101,9 @@ header {
                     background-position: 0 1px;
                     display: inline-block;
                   }
+                &:hover i.top-arr {
+                    background-position: 0 -14px;
+                }
             }
 
             li.editorer {
