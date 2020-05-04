@@ -1,3 +1,8 @@
+.banner-sec {
+  padding: 30px 0 40px;
+  background: #ffff;
+}
+
 .home-banner {
   width: 100%;
   text-align: left;
@@ -15,6 +20,13 @@
     right: 80px;
     bottom: 90px;
   }
+
+  h1 {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 17px;
+  }
+
   .sub-title {
     font-size: 20px;
     color: #fff;
@@ -22,9 +34,11 @@
     padding: 0px;
     line-height: 30px;
   }
+
   ul {
     justify-content: center;
     flex-wrap: wrap;
+
     li {
       font-size: 16px;
       line-height: 1;
@@ -35,22 +49,25 @@
       margin-bottom: 20px;
       padding-left: 25px;
       position: relative;
+
       &:before {
         content: '';
         width: 23px;
         height: 17px;
-        background: url(https://images.template.net/images/img/pro-icons-27.svg) -64px -668px
-          no-repeat;
+        background: url(https://images.template.net/images/img/pro-icons-27.svg) -64px -668px no-repeat;
         float: left;
         position: absolute;
         left: 0;
       }
+
       //    &:not(:last-child):not(:nth-child(3)):after{
       //        content:'';display:inline-block;width:5px;height:5px;background:#7a7a7a;border-radius:50%;position:absolute;right:0;top:6px;
       //    }
     }
   }
+
 }
+
 .home-banner .download-sec {
   display: flex;
 
@@ -63,14 +80,17 @@
     text-transform: initial;
     background: transparent;
     border: 1px solid #e1e1e1;
+
     &.block {
       display: block;
     }
+
     &:hover {
       background: #fff;
       color: #222;
     }
   }
+
   .btn-pro {
     box-shadow: 0 2px 8px rgba(254, 75, 17, 0.35);
     margin: 0 15px 0 0;
@@ -80,6 +100,7 @@
     line-height: 22px;
     text-transform: initial;
   }
+
   .bannerBtn {
     span {
       font-size: 13px;
@@ -90,4 +111,227 @@
 .priducts-sec {
   width: 1228px;
   float: left;
+}
+
+.hor-catlist {
+  width: 100%;
+  padding: 15px 0 0;
+  margin-bottom: 2px;
+  float: left;
+
+  ul {
+    margin: 0 -4px;
+
+    padding: 3px 0;
+    margin-bottom: 12px;
+
+    li {
+      padding: 0 4px;
+      float: left;
+      margin-bottom: 6px;
+
+      a {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        color: #fff;
+        text-transform: capitalize;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+        -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+        background: #36414e;
+        padding: 14px 14px;
+        border-radius: 30px;
+        float: left;
+        width: 100%;
+        min-width: 60px;
+        text-align: center;
+
+        &:hover {
+          color: #fff;
+          border-radius: 18px;
+          background: #42556b;
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.18);
+          -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.18);
+        }
+
+        &.active {
+          color: #1b82f2;
+          background: #e3effb;
+        }
+      }
+    }
+  }
+
+  ul.hor-list-formats {
+    max-height: 50px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    padding: 6px 0;
+    display: block;
+
+    li {
+      padding: 0 5px;
+      margin-bottom: 12px;
+
+      a {
+        box-shadow: none;
+        background: transparent;
+        color: #006ade;
+        border: 1px solid #e0e0e0;
+        padding: 9px 17px 8px;
+        @include flexbox();
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0.2px;
+
+        &:hover {
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+          -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+        }
+
+        span.format-icon {
+          display: inline-block;
+          width: 20px;
+          height: 18px;
+          margin-right: 4px;
+        }
+
+        span.word-icon {
+          background-position: 0 -190px;
+        }
+
+        span.ps-icon {
+          background-position: -92px -190px;
+        }
+
+        span.pages-icon {
+          background-position: -152px -190px;
+        }
+
+        span.docs-icon {
+          background-position: -355px -190px;
+        }
+
+        span.sheets-icon {
+          background-position: -463px -190px;
+        }
+
+        span.exel-icon {
+          background-position: -294px -190px;
+        }
+
+        span.document-icon {
+          background-position: -436px -190px;
+        }
+
+        span.ai-icon {
+          background-position: -122px -190px;
+        }
+
+        span.publisher-icon {
+          background-position: -30px -190px;
+        }
+
+        span.html-icon {
+          background-position: -181px -190px;
+        }
+
+        span.wordpress-icon {
+          background-position: -409px -190px;
+        }
+
+        span.powerpoint-icon {
+          background-position: -325px -190px;
+        }
+
+        span.indesign-icon {
+          background-position: -61px -190px;
+        }
+
+        span.keynote-icon {
+          background-position: -234px -190px;
+        }
+
+        span.numbers-icon {
+          background-position: -265px -190px;
+        }
+
+        span.outlook-icon {
+          background-position: -516px -190px;
+        }
+
+        span.css-icon {
+          background-position: -206px -190px;
+        }
+
+        span.slides-icon {
+          background-position: -487px -190px;
+        }
+
+
+        &.active {
+          background: #e4f0fe;
+
+          span.hor-close {
+            display: inline-block;
+            background-position: -1148px -45px;
+            width: 18px;
+            height: 15px;
+            margin-left: 4px;
+          }
+        }
+
+        span.media-icon {
+          background: url(https://images.template.net/images/img/social-share1.svg) no-repeat;
+
+          &.linkedin {
+            background-position: 0 0;
+          }
+
+          &.tumblr {
+            background-position: -57px 0;
+          }
+
+          &.facebook {
+            background-position: -114px 0;
+          }
+
+          &.pinterest {
+            background-position: -172px 0;
+          }
+
+          &.google {
+            background-position: -229px 0;
+          }
+
+          &.twitter {
+            background-position: -286px 0;
+          }
+
+          &.youtube {
+            background-position: -343px 0;
+          }
+
+          &.instagram {
+            background-position: -386px 0;
+          }
+
+          &.snapchat {
+            background-position: -430px 0;
+          }
+
+        }
+
+
+
+      }
+    }
+  }
+}
+
+.home-products-sec {
+  width: 100%;
+  float: left;
+  margin-bottom: 70px;
+  padding-top: 15px;
 }
