@@ -1,12 +1,12 @@
 const _ = require('lodash');
 
-const SiteUrls = require('../models/SiteUrls');
+const Product = require('../models/SiteUrls');
 const SiteUrlsFaq = require('../models/SiteUrlsFaq');
 
-const CategoryPageController = () => {
+const HomePageController = () => {
   const show = async (req, res) => {
-    const model = {};
-    const productOpts = {};
+    let model = {};
+    let productOpts = {};
     let perPage;
     let currentpage;
     model.layout = 'layouts/category.ejs';
@@ -44,7 +44,9 @@ const CategoryPageController = () => {
       })
       .then((faqs) => {
         model.faqs = faqs;
-        return res.render('pages/category-page.ejs', model);
+        return res.status(200).json({
+          msg: 'Page Found',
+        });
       })
       .catch((err) => {
         console.log(err);
@@ -52,11 +54,13 @@ const CategoryPageController = () => {
           msg: 'Page Not Found',
         });
       });
+    // return res.render('pages/category-page.ejs', model);
   };
 
   return {
     show,
+    loadmore,
   };
 };
 
-module.exports = CategoryPageController;
+module.exports = HomePageController;
