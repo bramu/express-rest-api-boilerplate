@@ -1,10 +1,10 @@
 const publicRoutes = {
-  'POST /user': 'UserController.register',
-  'POST /register': 'UserController.register', // alias for POST /user
-  'POST /login': 'UserController.login',
-  'POST /validate': 'UserController.validate',
-  'GET /': 'UserController.helloWorld',
-  'GET /editable/:slug': 'CategoryPageController.show',
+  'POST /user': 'users.register',
+  'POST /register': 'users.register', // alias for POST /user
+  'POST /login': 'users.login',
+  'POST /validate': 'users.validate',
+  'GET /': 'users.helloWorld',
+  'GET /editable/:slug': 'categories.show',
 };
 
 module.exports = publicRoutes;

@@ -44,9 +44,7 @@ const CategoryPageController = () => {
       })
       .then((faqs) => {
         model.faqs = faqs;
-        return res.status(200).json({
-          msg: 'Page Found',
-        });
+        return res.render('pages/category-page.ejs', model);
       })
       .catch((err) => {
         console.log(err);
@@ -54,7 +52,6 @@ const CategoryPageController = () => {
           msg: 'Page Not Found',
         });
       });
-    // return res.render('pages/category-page.ejs', model);
   };
 
   return {
