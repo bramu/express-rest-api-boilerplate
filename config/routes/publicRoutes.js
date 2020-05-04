@@ -5,6 +5,8 @@ const publicRoutes = {
   'POST /validate': 'users.validate',
   'GET /': 'users.helloWorld',
   'GET /editable/:slug': 'categories.show',
+  'GET /editable/:productId/:slug': 'product.show',
+  'GET /pro/:productId/:slug': 'product.showpro',
 };
 
 module.exports = publicRoutes;
