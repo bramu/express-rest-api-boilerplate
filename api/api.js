@@ -11,7 +11,7 @@ const expressLayouts = require('express-ejs-layouts');
 const path = require('path');
 const { compileSassAndSaveMultiple } = require('compile-sass');
 const fs = require('fs');
-const Assets = require('./helpers/assets');
+const Assets = require('./helpers/assets')();
 
 require('dotenv').config();
 
@@ -65,8 +65,6 @@ app.all('/private/*', (req, res, next) => auth(req, res, next));
 // fill routes for express application
 app.use('/public', mappedOpenRoutes);
 app.use('/private', mappedAuthRoutes);
-// app.use('/',express.static('assets'));
-// app.use('/assets', express.static('assets'));
 
 app.use('/assets', [
   express.static(path.join(__dirname, '../node_modules/jquery/dist/')),
@@ -88,6 +86,8 @@ compileSassAndSaveMultiple({
   cssPath: path.join(__dirname, '../assets/css/'),
   files: ['layout.scss'],
 });
+
+app.locals.renderScriptsTags = Assets;
 
 server.listen(config.port, () => {
   if (

@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="/assets/css/layout.css">
+    <script src="/assets/jquery.js"></script>
     <style media="screen">
         <%- include('../../assets/css/firstfold/' + firstfold + '.css') %> 
     </style>
@@ -10,8 +11,8 @@
 
 <body>
     <%- body %>
-    <script src="/assets/js/common.js"></script>
-    <script src="/assets/jquery.js"></script>
+    <%- renderScripts %>
+    
 </body>
 
 </html>

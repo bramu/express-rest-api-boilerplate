@@ -1,30 +1,26 @@
 const _ = require('lodash');
+const fs = require('fs');
+const path = require('path');
 
-const assetsJscon = {
-  categories: ['javascripts/common.js'],
-};
+const getJavascriptFile = () => {
+  const jsFiles = fs.readdirSync(path.join(__dirname, '../../assets/js/'));
 
-const Assets = () => {
-  const getJavascriptFile = (key) => {
-    const files = assetsJscon[key];
-
-    let returnString = '';
-    if (process.env.ENVIRONMENT === 'prod') {
-      // get the md5 of each file and create file name as categories-<md5>.js
-      let hash = '';
-      for (let i = 0; i < files.length; i++) {
-        hash = hash + md5File.sync(files[i]);
-      }
-      hash = key + '-' + md5(hash) + '.js';
-      returnString = `<script type="text/javascript" src="${hash}"></script>`;
-    } else {
-      for (let i = 0; i < files.length; i++) {
-        returnString = `<script type="text/javascript" src="${files[i]}"></script>`;
-      }
+  let returnString = '';
+  if (process.env.ENVIRONMENT === 'prod') {
+    // get the md5 of each file and create file name as categories-<md5>.js
+    let hash = '';
+    for (let i = 0; i < files.length; i++) {
+      hash = hash + md5File.sync(files[i]);
     }
+    hash = key + '-' + md5(hash) + '.js';
+    returnString = `<script type="text/javascript" src="${hash}"></script>`;
+  } else {
+    returnString = jsFiles
+      .map((script) => `<script src="/assets/js/${script}"></script>`)
+      .join('\n');
+  }
 
-    return returnString;
-  };
+  return returnString;
 };
 
-module.exports = Assets;
+module.exports = getJavascriptFile;
