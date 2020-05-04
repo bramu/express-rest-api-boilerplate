@@ -1,9 +1,9 @@
 const _ = require('lodash');
 
-const SiteUrls = require('../models/SiteUrls');
+const Product = require('../models/SiteUrls');
 const SiteUrlsFaq = require('../models/SiteUrlsFaq');
 
-const CategoryPageController = () => {
+const HomePageController = () => {
   const show = async (req, res) => {
     let model = {};
     let productOpts = {};
@@ -59,7 +59,8 @@ const CategoryPageController = () => {
 
   return {
     show,
+    loadmore,
   };
 };
 
-module.exports = CategoryPageController;
+module.exports = HomePageController;

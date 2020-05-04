@@ -61,7 +61,14 @@ app.all('/private/*', (req, res, next) => auth(req, res, next));
 app.use('/public', mappedOpenRoutes);
 app.use('/private', mappedAuthRoutes);
 // app.use('/',express.static('assets'));
-app.use('/assets', express.static('assets'));
+// app.use('/assets', express.static('assets'));
+
+app.use('/assets', [
+  express.static(path.join(__dirname, '../node_modules/jquery/dist/')),
+  express.static(path.join(__dirname, '../node_modules/materialize-css/dist/')),
+  express.static('assets'),
+]);
+
 
 const testFolder = path.join(__dirname, '../assets/styles/firstfold/');
 const scssfiles = fs.readdirSync(testFolder);
@@ -77,7 +84,6 @@ compileSassAndSaveMultiple({
   cssPath: path.join(__dirname, '../assets/css/'),
   files: ['layout.scss']
 });
-
 
 server.listen(config.port, () => {
   if (environment !== 'production' &&
