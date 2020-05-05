@@ -1,4 +1,4 @@
 {
-    "watch": ["assets", "api", "views"],
-    "ext": "js, scss, ejs"
+  "watch": ["api", "views"],
+  "ext": "js, scss, ejs"
 }

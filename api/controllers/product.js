@@ -4,6 +4,7 @@ const ProductFileFormatsAndDownloads = require('../models/ProductFileFormatsAndD
 const Category = require('../models/Category');
 const ProductCategoryOverView = require('../models/ProductCategoryOverView');
 const ProductImages = require('../models/ProductImages');
+const ProductPackageSets = require('../models/ProductPackageSets');
 
 const formatArray = [
   'GDocsLink',
@@ -26,22 +27,31 @@ const formatArray = [
 
 const ProductPageController = () => {
   const show = async (req, res) => {
-    const model = {};
-    let productId = Number(req.params.productId);
-    let slug = req.params.slug;
+    let model = {};
     let url = req.path;
-    model.productId = productId;
-    model.slug = slug;
-    model.firstfold = 'product';
-    model.layout = 'layouts/new-layout.ejs';
+    const prodOpts = {
+      productId: Number(req.params.productId),
+      slug: req.params.slug,
+    };
 
-    return Product.getByIdSlug(model)
+    console.log(await ProductPackageSets.getPackageProducts(15649));
+
+    return Product.getByIdSlug(prodOpts)
       .then((product) => {
         if (!product) {
           return Promise.reject(new Error('Url Not Found'));
         }
-        model.product = product;
-        return ProductFileFormatsAndDownloads.getFileFormats(model.product.id);
+        model = _.omit(product, [
+          'userId',
+          'editingStatus',
+          'editingBy',
+          'lastEditTime',
+          'createdTime',
+          'updatedTime',
+          'btProductId',
+          'defaultFileformat',
+        ]);
+        return ProductFileFormatsAndDownloads.getFileFormats(model.id);
       })
       .then((fileFormats) => {
         model.fileFormats = fileFormats;
@@ -50,39 +60,35 @@ const ProductPageController = () => {
             r.fileFormat = 'Google Docs';
           }
         });
-        return ProductCategoryOverView.getOverView(model.product.id);
+        return ProductCategoryOverView.getOverView(model.id);
       })
       .then((overview) => {
         model.overview = overview;
-        return ProductImages.getByProductId(model.product.id);
+        return ProductImages.getByProductId(model.id);
       })
       .then((images) => {
         model.images = images;
-        return ProductFileFormatsAndDownloads.getFileFormatDimes(
-          model.product.id
-        );
-      })
-      .then((fileDemensions) => {
-        model.fileDimensions = fileDemensions;
-        let dimensions = [];
-        model.fileDimensions.forEach((r) => {
-          if (r.fileDimension.indexOf(',') < 0 && r.fileDimension !== '') {
-            dimensions.push(r.fileDimension);
-          } else if (r.fileDimension !== '') {
-            let dime = r.fileDimension;
-            let dimeArray = dime.split(',');
-            dimensions = [...dimeArray];
-          }
-        });
-        model.dimensions = _.uniq(dimensions);
-        for (let i = 0; i < model.dimensions.length; i++) {
-          if (model.dimensions[i] === '') {
-            model.dimensions.splice(i, 1);
-          }
+        const relatedProductIds = model.relatedProducts.split(',');
+        const data = {
+          productId: model.id,
+          productTitle: model.title,
+          siteUrlsId: [], // need to update with inner page sidebar data
+          isPro: model.is_pro,
+          offSet: 0,
+          perPage: 12,
+        };
+        if (relatedProductIds.length < 1) {
+          return Product.getRelatedProducts(data);
         }
-
-        console.log(model);
-
+        return Product.getRelatedProductsNew(relatedProductIds);
+      })
+      .then((relatedProducts) => {
+        model.relatedProducts = [];
+        if (relatedProducts && relatedProducts.length) {
+          model.relatedProducts = relatedProducts;
+        }
+        model.firstfold = 'product';
+        model.layout = 'layouts/new-layout.ejs';
         res.render('pages/product.ejs', model);
       });
   };
@@ -94,7 +100,6 @@ const ProductPageController = () => {
     model.firstfold = 'product';
     model.url = req.path;
     model.layout = 'layouts/new-layout.ejs';
-
     res.render('pages/pro-product.ejs', model);
   };
 

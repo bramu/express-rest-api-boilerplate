@@ -11,7 +11,7 @@ const expressLayouts = require('express-ejs-layouts');
 const path = require('path');
 const { compileSassAndSaveMultiple } = require('compile-sass');
 const fs = require('fs');
-const Assets = require('./helpers/assets')();
+const Assets = require('./helpers/assets').getJavascriptFile();
 
 require('dotenv').config();
 
