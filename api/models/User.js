@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const bcrypt = require('bcryptjs');
+const _ = require('lodash');
 const bcryptService = require('../services/bcrypt.service');
 const auth = require('../services/auth.service');
 
@@ -144,18 +145,14 @@ User.getByEmail = async (userEmail) => {
       userEmail,
     },
   }).then((userDetails) => {
+    if (userDetails) {
+      return userDetails;
+    }
     return userDetails;
   });
 };
 
 // eslint-disable-next-line
-// User.prototype.toJSON = () => {
-//   const values = Object.assign({}, this.get());
-
-//   delete values.password;
-
-//   return values;
-// };
 
 User.prototype.generateJwt = (user) => {
   const payload = {
@@ -183,5 +180,13 @@ User.addHook('afterCreate', (user) => {
     }
   );
 });
+
+User.prototype.toJSON = (object) => {
+  const values = Object.assign({}, object);
+
+  delete values.password;
+
+  return values;
+};
 
 module.exports = User;

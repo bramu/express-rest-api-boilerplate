@@ -5,57 +5,39 @@ const bcryptService = require('../services/bcrypt.service');
 
 const UserController = () => {
   const register = async (req, res) => {
-    const { body } = req;
+    try {
+      const { body } = req;
 
-    const { name, email, password } = body;
+      const { name, email, password } = body;
 
-    const userDetails = await User.getByEmail(email);
+      const userDetails = await User.getByEmail(email);
 
-    if (userDetails) {
+      if (userDetails) {
+        return res.status(200).json({
+          msg: 'Email Already Exists',
+        });
+      }
+
+      const opts = {
+        fullName: name,
+        userEmail: email,
+        password,
+      };
+
+      const user = await User.create(opts);
+
+      const token = user.authToken;
       return res.status(200).json({
-        msg: 'Email Already Exists',
+        msg: 'User Successfully Created',
+        token,
+      });
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json({
+        error: err,
+        msg: 'Internal server error',
       });
     }
-
-    const opts = {
-      fullName: name,
-      userEmail: email,
-      password,
-    };
-
-    const user = await User.create(opts);
-
-    const token = '';
-    return res.status(200).json({
-      msg: 'User Successfully Created',
-      data: token,
-    });
-
-    // if (body.password === body.password2) {
-    //   try {
-    //     const user = await User.create({
-    //       email: body.email,
-    //       password: body.password,
-    //     });
-    //     const token = authService().issue({
-    //       id: user.id,
-    //     });
-
-    //     return res.status(200).json({
-    //       token,
-    //       user,
-    //     });
-    //   } catch (err) {
-    //     // console.log(err);
-    //     return res.status(500).json({
-    //       msg: 'Internal server error',
-    //     });
-    //   }
-    // }
-
-    // return res.status(400).json({
-    //   msg: "Bad Request: Passwords don't match",
-    // });
   };
 
   const login = async (req, res) => {
@@ -82,6 +64,17 @@ const UserController = () => {
             userEmail: user.userEmail,
             userType: user.userType,
           });
+
+          const cookie = req.cookies.loggedIn;
+          if (cookie === undefined) {
+            // no: set a new cookie
+            let randomNumber = Math.random().toString();
+            randomNumber = randomNumber.substring(2, randomNumber.length);
+            res.cookie('loggedIn', randomNumber, {
+              maxAge: 1000 * 60 * 60 * 24 * 365,
+              // httpOnly: true
+            });
+          }
 
           return res.status(200).json({
             msg: 'loggedIn',
