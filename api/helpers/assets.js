@@ -2,7 +2,6 @@ const _ = require('lodash');
 const fs = require('fs');
 const path = require('path');
 const { v4 } = require('uuid');
-const UglifyJs = require('uglify-js');
 const AWS = require('aws-sdk');
 
 const ID = 'AKIAIOAFAC3L5DS7XTYQ';

@@ -7,6 +7,7 @@ const publicRoutes = {
   'GET /editable/:slug': 'categories.show',
   'GET /editable/:productId/:slug': 'product.show',
   'GET /pro/:productId/:slug': 'product.showpro',
+  'POST /user/register': 'users.register',
 };
 
 module.exports = publicRoutes;

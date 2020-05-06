@@ -1,9 +1,9 @@
 const development = {
-  database: 'Tnet_FreeTemplates_New',
+  database: 'Tnet_FreeTemplates',
   username: 'root',
   password: 'password',
   host: '127.0.0.1',
-  dialect: 'mysql'
+  dialect: 'mysql',
 };
 
 const testing = {
@@ -19,7 +19,7 @@ const production = {
   username: process.env.DB_USER,
   password: process.env.DB_PASS,
   host: process.env.DB_HOST || 'localhost',
-  dialect: 'mysql' ,
+  dialect: 'mysql',
 };
 
 module.exports = {

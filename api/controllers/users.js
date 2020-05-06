@@ -7,31 +7,57 @@ const UserController = () => {
   const register = async (req, res) => {
     const { body } = req;
 
-    if (body.password === body.password2) {
-      try {
-        const user = await User.create({
-          email: body.email,
-          password: body.password,
-        });
-        const token = authService().issue({
-          id: user.id,
-        });
+    const { name, email, password } = body;
 
-        return res.status(200).json({
-          token,
-          user,
-        });
-      } catch (err) {
-        // console.log(err);
-        return res.status(500).json({
-          msg: 'Internal server error',
-        });
-      }
+    const userDetails = await User.getByEmail(email);
+
+    if (userDetails) {
+      return res.status(200).json({
+        msg: 'Email Already Exists',
+      });
     }
 
-    return res.status(400).json({
-      msg: "Bad Request: Passwords don't match",
+    const opts = {
+      fullName: name,
+      userEmail: email,
+      password,
+    };
+
+    const user = await User.create(opts);
+
+    console.log(user);
+
+    const token = '';
+    return res.status(200).json({
+      msg: 'User Successfully Created',
+      data: token,
     });
+
+    // if (body.password === body.password2) {
+    //   try {
+    //     const user = await User.create({
+    //       email: body.email,
+    //       password: body.password,
+    //     });
+    //     const token = authService().issue({
+    //       id: user.id,
+    //     });
+
+    //     return res.status(200).json({
+    //       token,
+    //       user,
+    //     });
+    //   } catch (err) {
+    //     // console.log(err);
+    //     return res.status(500).json({
+    //       msg: 'Internal server error',
+    //     });
+    //   }
+    // }
+
+    // return res.status(400).json({
+    //   msg: "Bad Request: Passwords don't match",
+    // });
   };
 
   const login = async (req, res) => {
