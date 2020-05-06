@@ -149,16 +149,15 @@ User.getByEmail = async (userEmail) => {
 };
 
 // eslint-disable-next-line
-User.prototype.toJSON = () => {
-  const values = Object.assign({}, this.get());
+// User.prototype.toJSON = () => {
+//   const values = Object.assign({}, this.get());
 
-  delete values.password;
+//   delete values.password;
 
-  return values;
-};
+//   return values;
+// };
 
 User.prototype.generateJwt = (user) => {
-  console.log(user);
   const payload = {
     id: user.id,
     fullName: user.fullName,

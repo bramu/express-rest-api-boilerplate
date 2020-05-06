@@ -25,8 +25,6 @@ const UserController = () => {
 
     const user = await User.create(opts);
 
-    console.log(user);
-
     const token = '';
     return res.status(200).json({
       msg: 'User Successfully Created',
@@ -67,7 +65,7 @@ const UserController = () => {
       try {
         const user = await User.findOne({
           where: {
-            email,
+            userEmail: email,
           },
         });
 
@@ -80,11 +78,14 @@ const UserController = () => {
         if (bcryptService().comparePassword(password, user.password)) {
           const token = authService().issue({
             id: user.id,
+            fullName: user.fullName,
+            userEmail: user.userEmail,
+            userType: user.userType,
           });
 
           return res.status(200).json({
+            msg: 'loggedIn',
             token,
-            user,
           });
         }
         return res.status(401).json({

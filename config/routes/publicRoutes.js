@@ -8,6 +8,7 @@ const publicRoutes = {
   'GET /editable/:productId/:slug': 'product.show',
   'GET /pro/:productId/:slug': 'product.showpro',
   'POST /user/register': 'users.register',
+  'POST /user/login': 'users.login',
 };
 
 module.exports = publicRoutes;
